@@ -15,6 +15,10 @@
 		B4D7E0F01C2877BE00ACAC3C /* PonyFaceCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E0EF1C2877BE00ACAC3C /* PonyFaceCategory.m */; };
 		B4D7E0F31C28784100ACAC3C /* PonyFace.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E0F21C28784100ACAC3C /* PonyFace.m */; };
 		B4D7E0F61C287B3700ACAC3C /* PonyFacesAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E0F51C287B3700ACAC3C /* PonyFacesAPI.m */; };
+		B4D7E0F91C28810700ACAC3C /* PonyFacesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E0F81C28810700ACAC3C /* PonyFacesTableViewController.m */; };
+		B4D7E0FC1C28814D00ACAC3C /* PonyFaceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E0FB1C28814D00ACAC3C /* PonyFaceTableViewCell.m */; };
+		B4D7E0FF1C2881AF00ACAC3C /* PonyFaceSearchResultsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E0FE1C2881AF00ACAC3C /* PonyFaceSearchResultsDataSource.m */; };
+		B4D7E1021C2884E400ACAC3C /* SearchTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E1011C2884E400ACAC3C /* SearchTagsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,14 @@
 		B4D7E0F21C28784100ACAC3C /* PonyFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PonyFace.m; sourceTree = "<group>"; };
 		B4D7E0F41C287B3700ACAC3C /* PonyFacesAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PonyFacesAPI.h; sourceTree = "<group>"; };
 		B4D7E0F51C287B3700ACAC3C /* PonyFacesAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PonyFacesAPI.m; sourceTree = "<group>"; };
+		B4D7E0F71C28810700ACAC3C /* PonyFacesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PonyFacesTableViewController.h; sourceTree = "<group>"; };
+		B4D7E0F81C28810700ACAC3C /* PonyFacesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PonyFacesTableViewController.m; sourceTree = "<group>"; };
+		B4D7E0FA1C28814D00ACAC3C /* PonyFaceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PonyFaceTableViewCell.h; sourceTree = "<group>"; };
+		B4D7E0FB1C28814D00ACAC3C /* PonyFaceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PonyFaceTableViewCell.m; sourceTree = "<group>"; };
+		B4D7E0FD1C2881AF00ACAC3C /* PonyFaceSearchResultsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PonyFaceSearchResultsDataSource.h; sourceTree = "<group>"; };
+		B4D7E0FE1C2881AF00ACAC3C /* PonyFaceSearchResultsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PonyFaceSearchResultsDataSource.m; sourceTree = "<group>"; };
+		B4D7E1001C2884E400ACAC3C /* SearchTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTagsViewController.h; sourceTree = "<group>"; };
+		B4D7E1011C2884E400ACAC3C /* SearchTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTagsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,14 @@
 				B4D7E0EF1C2877BE00ACAC3C /* PonyFaceCategory.m */,
 				B4D7E0F41C287B3700ACAC3C /* PonyFacesAPI.h */,
 				B4D7E0F51C287B3700ACAC3C /* PonyFacesAPI.m */,
+				B4D7E0FD1C2881AF00ACAC3C /* PonyFaceSearchResultsDataSource.h */,
+				B4D7E0FE1C2881AF00ACAC3C /* PonyFaceSearchResultsDataSource.m */,
+				B4D7E0F71C28810700ACAC3C /* PonyFacesTableViewController.h */,
+				B4D7E0F81C28810700ACAC3C /* PonyFacesTableViewController.m */,
+				B4D7E0FA1C28814D00ACAC3C /* PonyFaceTableViewCell.h */,
+				B4D7E0FB1C28814D00ACAC3C /* PonyFaceTableViewCell.m */,
+				B4D7E1001C2884E400ACAC3C /* SearchTagsViewController.h */,
+				B4D7E1011C2884E400ACAC3C /* SearchTagsViewController.m */,
 				B424ACB71C28769A001C05A1 /* Supporting Files */,
 			);
 			path = PonyFaces;
@@ -161,11 +181,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4D7E0F91C28810700ACAC3C /* PonyFacesTableViewController.m in Sources */,
 				B424ACBC1C28769A001C05A1 /* AppDelegate.m in Sources */,
 				B4D7E0F61C287B3700ACAC3C /* PonyFacesAPI.m in Sources */,
 				B4D7E0F01C2877BE00ACAC3C /* PonyFaceCategory.m in Sources */,
+				B4D7E0FF1C2881AF00ACAC3C /* PonyFaceSearchResultsDataSource.m in Sources */,
 				B4D7E0F31C28784100ACAC3C /* PonyFace.m in Sources */,
 				B424ACB91C28769A001C05A1 /* main.m in Sources */,
+				B4D7E0FC1C28814D00ACAC3C /* PonyFaceTableViewCell.m in Sources */,
+				B4D7E1021C2884E400ACAC3C /* SearchTagsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
