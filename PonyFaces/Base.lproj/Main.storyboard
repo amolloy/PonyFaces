@@ -116,6 +116,7 @@
                                     <subviews>
                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="g3e-5L-dDo">
                                             <rect key="frame" x="50" y="59" width="37" height="37"/>
+                                            <color key="color" red="0.99228733777999878" green="0.0" blue="0.89954441785812378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </activityIndicatorView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kx0-pA-Rmu">
                                             <rect key="frame" x="8" y="8" width="120" height="138.5"/>
@@ -163,6 +164,7 @@
                                     <outlet property="categoryLabel" destination="Pr3-2x-6Lw" id="SNO-OT-rfo"/>
                                     <outlet property="tagsView" destination="fHK-zu-hFZ" id="1Jj-p2-nrs"/>
                                     <outlet property="thumbnailView" destination="Kx0-pA-Rmu" id="Q97-AJ-f56"/>
+                                    <segue destination="HT0-7o-0PG" kind="show" id="wKV-Jq-laQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -175,6 +177,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Kr-RE-BMN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2478" y="-794"/>
+        </scene>
+        <!--Pony Face Detail View Controller-->
+        <scene sceneID="sfR-F8-un7">
+            <objects>
+                <viewController id="HT0-7o-0PG" customClass="PonyFaceDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A3n-Ev-zsI"/>
+                        <viewControllerLayoutGuide type="bottom" id="f3T-BH-aAl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KB1-6Q-uuX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVx-dN-MoZ">
+                                <rect key="frame" x="268" y="72" width="64" height="32.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="240" translatesAutoresizingMaskIntoConstraints="NO" id="ALu-aK-gcc">
+                                <rect key="frame" x="180" y="112" width="240" height="240"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="0.0" placeholderIntrinsicHeight="98" translatesAutoresizingMaskIntoConstraints="NO" id="ZBH-Jl-Zri" customClass="BENTagsView">
+                                <rect key="frame" x="300" y="360" width="0.0" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jcj-Oa-RQA"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="qtd-am-p7M">
+                                <rect key="frame" x="282" y="213" width="37" height="37"/>
+                                <color key="color" red="0.99228733777999878" green="0.0" blue="0.89954441785812378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ALu-aK-gcc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KB1-6Q-uuX" secondAttribute="leadingMargin" id="36K-No-RlG"/>
+                            <constraint firstItem="uVx-dN-MoZ" firstAttribute="top" secondItem="A3n-Ev-zsI" secondAttribute="bottom" constant="8" id="7PS-fg-QHh"/>
+                            <constraint firstItem="qtd-am-p7M" firstAttribute="centerX" secondItem="ALu-aK-gcc" secondAttribute="centerX" priority="750" id="PLC-VR-eqQ"/>
+                            <constraint firstItem="ALu-aK-gcc" firstAttribute="top" secondItem="uVx-dN-MoZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Tcw-yh-umV"/>
+                            <constraint firstItem="ZBH-Jl-Zri" firstAttribute="top" secondItem="ALu-aK-gcc" secondAttribute="bottom" constant="8" symbolic="YES" id="UKD-lJ-8Qd"/>
+                            <constraint firstItem="qtd-am-p7M" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uVx-dN-MoZ" secondAttribute="bottom" constant="8" symbolic="YES" id="VHR-kC-LE8"/>
+                            <constraint firstItem="uVx-dN-MoZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KB1-6Q-uuX" secondAttribute="leadingMargin" id="YDe-6u-sCD"/>
+                            <constraint firstItem="uVx-dN-MoZ" firstAttribute="centerX" secondItem="KB1-6Q-uuX" secondAttribute="centerX" id="aoX-am-2O2"/>
+                            <constraint firstItem="ZBH-Jl-Zri" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qtd-am-p7M" secondAttribute="bottom" constant="8" symbolic="YES" id="mnH-d1-MK3"/>
+                            <constraint firstItem="ZBH-Jl-Zri" firstAttribute="centerX" secondItem="ALu-aK-gcc" secondAttribute="centerX" id="rdd-um-1KI"/>
+                            <constraint firstItem="qtd-am-p7M" firstAttribute="centerY" secondItem="ALu-aK-gcc" secondAttribute="centerY" id="rrs-wH-CMd"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="uVx-dN-MoZ" secondAttribute="trailing" id="su0-iy-Mxg"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="ALu-aK-gcc" secondAttribute="trailing" id="szX-qS-UWk"/>
+                            <constraint firstItem="ALu-aK-gcc" firstAttribute="centerX" secondItem="KB1-6Q-uuX" secondAttribute="centerX" id="tX3-4u-QaV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="qtd-am-p7M" id="1wV-Y6-ceh"/>
+                        <outlet property="categoryLabel" destination="uVx-dN-MoZ" id="OLS-92-v1K"/>
+                        <outlet property="imageView" destination="ALu-aK-gcc" id="qsM-v3-fBU"/>
+                        <outlet property="tagsView" destination="ZBH-Jl-Zri" id="fYp-rt-wRg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kgo-V7-IHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3194" y="-794"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
