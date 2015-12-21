@@ -30,7 +30,7 @@
 	return self;
 }
 
-+ (instancetype)ponyFaceCategoryWithId:(NSInteger)categoryID
++ (instancetype)ponyFaceCategoryWithID:(NSInteger)categoryID
 								  name:(NSString*)name
 {
 	return [[self alloc] initWithID:categoryID name:name];

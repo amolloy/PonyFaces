@@ -17,7 +17,7 @@
 
 - (instancetype)initWithID:(NSInteger)categoryID
 					  name:(NSString*)name;
-+ (instancetype)ponyFaceCategoryWithId:(NSInteger)categoryID
++ (instancetype)ponyFaceCategoryWithID:(NSInteger)categoryID
 								  name:(NSString*)name;
 
 - (void)addPonyFaceWithId:(NSInteger)ponyID
