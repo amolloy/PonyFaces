@@ -23,6 +23,7 @@
 		B424ACC61C28769A001C05A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B424ACC91C28769A001C05A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B424ACCB1C28769A001C05A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B424ACD11C2876E1001C05A1 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +70,7 @@
 		B424ACB71C28769A001C05A1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B424ACD11C2876E1001C05A1 /* Warnings.xcconfig */,
 				B424ACB81C28769A001C05A1 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -173,6 +175,7 @@
 /* Begin XCBuildConfiguration section */
 		B424ACCC1C28769A001C05A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B424ACD11C2876E1001C05A1 /* Warnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -216,6 +219,7 @@
 		};
 		B424ACCD1C28769A001C05A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B424ACD11C2876E1001C05A1 /* Warnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
