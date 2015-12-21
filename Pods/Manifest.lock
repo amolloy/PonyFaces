@@ -1,4 +1,5 @@
 PODS:
+  - BENTagsView (0.9.0)
   - FLAnimatedImage (1.0.10)
   - PINCache (2.1.2)
   - PINRemoteImage (1.2.2):
@@ -10,9 +11,11 @@ PODS:
     - PINRemoteImage/Core
 
 DEPENDENCIES:
+  - BENTagsView
   - PINRemoteImage
 
 SPEC CHECKSUMS:
+  BENTagsView: 1a6ade3a65b7e677ea7482c1c08983ab4db532d5
   FLAnimatedImage: e16a1e1cef08e4c509b47e4acbe3923f65c16135
   PINCache: 9e70271f1bdd60c0465b7208adcc4b6acc1fc376
   PINRemoteImage: 9f6f484bbceee15e2df5aee0beeac2e261e4ac81
