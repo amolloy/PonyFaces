@@ -19,9 +19,11 @@
 		B4D7E0FC1C28814D00ACAC3C /* PonyFaceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E0FB1C28814D00ACAC3C /* PonyFaceTableViewCell.m */; };
 		B4D7E0FF1C2881AF00ACAC3C /* PonyFaceSearchResultsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E0FE1C2881AF00ACAC3C /* PonyFaceSearchResultsDataSource.m */; };
 		B4D7E1021C2884E400ACAC3C /* SearchTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E1011C2884E400ACAC3C /* SearchTagsViewController.m */; };
+		CBF30C2EAF8A767C72E1FE9E /* libPods-PonyFaces.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 603FBB8F15F98E55CFE95191 /* libPods-PonyFaces.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		603FBB8F15F98E55CFE95191 /* libPods-PonyFaces.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PonyFaces.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B424ACB41C28769A001C05A1 /* PonyFaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PonyFaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B424ACB81C28769A001C05A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B424ACBA1C28769A001C05A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -45,6 +47,8 @@
 		B4D7E0FE1C2881AF00ACAC3C /* PonyFaceSearchResultsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PonyFaceSearchResultsDataSource.m; sourceTree = "<group>"; };
 		B4D7E1001C2884E400ACAC3C /* SearchTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTagsViewController.h; sourceTree = "<group>"; };
 		B4D7E1011C2884E400ACAC3C /* SearchTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTagsViewController.m; sourceTree = "<group>"; };
+		B6E42F6C27DF1F60B936C8ED /* Pods-PonyFaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PonyFaces.release.xcconfig"; path = "Pods/Target Support Files/Pods-PonyFaces/Pods-PonyFaces.release.xcconfig"; sourceTree = "<group>"; };
+		DCA0738139A4CAB430CC39FE /* Pods-PonyFaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PonyFaces.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PonyFaces/Pods-PonyFaces.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBF30C2EAF8A767C72E1FE9E /* libPods-PonyFaces.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +68,8 @@
 			children = (
 				B424ACB61C28769A001C05A1 /* PonyFaces */,
 				B424ACB51C28769A001C05A1 /* Products */,
+				E03825BCE0E779F7F3B629DD /* Pods */,
+				C72970DC69F85EC6086ADEE7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +118,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C72970DC69F85EC6086ADEE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				603FBB8F15F98E55CFE95191 /* libPods-PonyFaces.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E03825BCE0E779F7F3B629DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCA0738139A4CAB430CC39FE /* Pods-PonyFaces.debug.xcconfig */,
+				B6E42F6C27DF1F60B936C8ED /* Pods-PonyFaces.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B424ACCE1C28769A001C05A1 /* Build configuration list for PBXNativeTarget "PonyFaces" */;
 			buildPhases = (
+				6A2442458E3D95EA6C7F0F45 /* Check Pods Manifest.lock */,
 				B424ACB01C28769A001C05A1 /* Sources */,
 				B424ACB11C28769A001C05A1 /* Frameworks */,
 				B424ACB21C28769A001C05A1 /* Resources */,
+				062599B2E8E6DC06A6037C89 /* Embed Pods Frameworks */,
+				CC90923C864A9768655CCF38 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -175,6 +202,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		062599B2E8E6DC06A6037C89 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PonyFaces/Pods-PonyFaces-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A2442458E3D95EA6C7F0F45 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CC90923C864A9768655CCF38 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PonyFaces/Pods-PonyFaces-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B424ACB01C28769A001C05A1 /* Sources */ = {
@@ -299,6 +374,7 @@
 		};
 		B424ACCF1C28769A001C05A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCA0738139A4CAB430CC39FE /* Pods-PonyFaces.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PonyFaces/Info.plist;
@@ -310,6 +386,7 @@
 		};
 		B424ACD01C28769A001C05A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6E42F6C27DF1F60B936C8ED /* Pods-PonyFaces.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PonyFaces/Info.plist;
