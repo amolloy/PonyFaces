@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B4D7E1121C28A4CE00ACAC3C /* Mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B4D7E1131C28A4CE00ACAC3C /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
+			buildPhases = (
+				B4D7E1161C28A4D400ACAC3C /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Mogenerator;
+			productName = Mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		B424ACB91C28769A001C05A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B424ACB81C28769A001C05A1 /* main.m */; };
 		B424ACBC1C28769A001C05A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B424ACBB1C28769A001C05A1 /* AppDelegate.m */; };
@@ -24,6 +38,13 @@
 		B4D7E10C1C28A10B00ACAC3C /* 748-heart.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D7E1091C28A10B00ACAC3C /* 748-heart.png */; };
 		B4D7E10D1C28A10B00ACAC3C /* 748-heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D7E10A1C28A10B00ACAC3C /* 748-heart@2x.png */; };
 		B4D7E10E1C28A10B00ACAC3C /* 748-heart@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D7E10B1C28A10B00ACAC3C /* 748-heart@3x.png */; };
+		B4D7E1111C28A3CA00ACAC3C /* PonyFacesFavorites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E10F1C28A3CA00ACAC3C /* PonyFacesFavorites.xcdatamodeld */; };
+		B4D7E1241C28A52200ACAC3C /* _FavoritePonyFace.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E1191C28A52200ACAC3C /* _FavoritePonyFace.m */; };
+		B4D7E1251C28A52200ACAC3C /* _FavoritePonyFaceCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E11B1C28A52200ACAC3C /* _FavoritePonyFaceCategory.m */; };
+		B4D7E1261C28A52200ACAC3C /* _FavoritePonyFaceTag.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E11D1C28A52200ACAC3C /* _FavoritePonyFaceTag.m */; };
+		B4D7E1271C28A52200ACAC3C /* FavoritePonyFace.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E11F1C28A52200ACAC3C /* FavoritePonyFace.m */; };
+		B4D7E1281C28A52200ACAC3C /* FavoritePonyFaceCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E1211C28A52200ACAC3C /* FavoritePonyFaceCategory.m */; };
+		B4D7E1291C28A52200ACAC3C /* FavoritePonyFaceTag.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E1231C28A52200ACAC3C /* FavoritePonyFaceTag.m */; };
 		CBF30C2EAF8A767C72E1FE9E /* libPods-PonyFaces.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 603FBB8F15F98E55CFE95191 /* libPods-PonyFaces.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +80,19 @@
 		B4D7E1091C28A10B00ACAC3C /* 748-heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "748-heart.png"; sourceTree = "<group>"; };
 		B4D7E10A1C28A10B00ACAC3C /* 748-heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "748-heart@2x.png"; sourceTree = "<group>"; };
 		B4D7E10B1C28A10B00ACAC3C /* 748-heart@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "748-heart@3x.png"; sourceTree = "<group>"; };
+		B4D7E1101C28A3CA00ACAC3C /* PonyFacesFavorites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PonyFacesFavorites.xcdatamodel; sourceTree = "<group>"; };
+		B4D7E1181C28A52200ACAC3C /* _FavoritePonyFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FavoritePonyFace.h; sourceTree = "<group>"; };
+		B4D7E1191C28A52200ACAC3C /* _FavoritePonyFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FavoritePonyFace.m; sourceTree = "<group>"; };
+		B4D7E11A1C28A52200ACAC3C /* _FavoritePonyFaceCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FavoritePonyFaceCategory.h; sourceTree = "<group>"; };
+		B4D7E11B1C28A52200ACAC3C /* _FavoritePonyFaceCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FavoritePonyFaceCategory.m; sourceTree = "<group>"; };
+		B4D7E11C1C28A52200ACAC3C /* _FavoritePonyFaceTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FavoritePonyFaceTag.h; sourceTree = "<group>"; };
+		B4D7E11D1C28A52200ACAC3C /* _FavoritePonyFaceTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FavoritePonyFaceTag.m; sourceTree = "<group>"; };
+		B4D7E11E1C28A52200ACAC3C /* FavoritePonyFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritePonyFace.h; sourceTree = "<group>"; };
+		B4D7E11F1C28A52200ACAC3C /* FavoritePonyFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritePonyFace.m; sourceTree = "<group>"; };
+		B4D7E1201C28A52200ACAC3C /* FavoritePonyFaceCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritePonyFaceCategory.h; sourceTree = "<group>"; };
+		B4D7E1211C28A52200ACAC3C /* FavoritePonyFaceCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritePonyFaceCategory.m; sourceTree = "<group>"; };
+		B4D7E1221C28A52200ACAC3C /* FavoritePonyFaceTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritePonyFaceTag.h; sourceTree = "<group>"; };
+		B4D7E1231C28A52200ACAC3C /* FavoritePonyFaceTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritePonyFaceTag.m; sourceTree = "<group>"; };
 		B6E42F6C27DF1F60B936C8ED /* Pods-PonyFaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PonyFaces.release.xcconfig"; path = "Pods/Target Support Files/Pods-PonyFaces/Pods-PonyFaces.release.xcconfig"; sourceTree = "<group>"; };
 		DCA0738139A4CAB430CC39FE /* Pods-PonyFaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PonyFaces.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PonyFaces/Pods-PonyFaces.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +133,7 @@
 				B424ACBA1C28769A001C05A1 /* AppDelegate.h */,
 				B424ACBB1C28769A001C05A1 /* AppDelegate.m */,
 				B424ACC61C28769A001C05A1 /* Assets.xcassets */,
+				B4D7E1171C28A52200ACAC3C /* FavoritesModel */,
 				B424ACCB1C28769A001C05A1 /* Info.plist */,
 				B424ACC81C28769A001C05A1 /* LaunchScreen.storyboard */,
 				B424ACC31C28769A001C05A1 /* Main.storyboard */,
@@ -106,21 +141,21 @@
 				B4D7E0F21C28784100ACAC3C /* PonyFace.m */,
 				B4D7E0EE1C2877BE00ACAC3C /* PonyFaceCategory.h */,
 				B4D7E0EF1C2877BE00ACAC3C /* PonyFaceCategory.m */,
+				B4D7E1031C28919C00ACAC3C /* PonyFaceDetailViewController.h */,
+				B4D7E1041C28919C00ACAC3C /* PonyFaceDetailViewController.m */,
 				B4D7E0F41C287B3700ACAC3C /* PonyFacesAPI.h */,
 				B4D7E0F51C287B3700ACAC3C /* PonyFacesAPI.m */,
 				B4D7E0FD1C2881AF00ACAC3C /* PonyFaceSearchResultsDataSource.h */,
 				B4D7E0FE1C2881AF00ACAC3C /* PonyFaceSearchResultsDataSource.m */,
 				B4D7E0F71C28810700ACAC3C /* PonyFacesTableViewController.h */,
 				B4D7E0F81C28810700ACAC3C /* PonyFacesTableViewController.m */,
+				B4D7E1061C28989200ACAC3C /* PonyFacesTagsView.h */,
+				B4D7E1071C28989200ACAC3C /* PonyFacesTagsView.m */,
 				B4D7E0FA1C28814D00ACAC3C /* PonyFaceTableViewCell.h */,
 				B4D7E0FB1C28814D00ACAC3C /* PonyFaceTableViewCell.m */,
 				B4D7E1001C2884E400ACAC3C /* SearchTagsViewController.h */,
 				B4D7E1011C2884E400ACAC3C /* SearchTagsViewController.m */,
 				B424ACB71C28769A001C05A1 /* Supporting Files */,
-				B4D7E1031C28919C00ACAC3C /* PonyFaceDetailViewController.h */,
-				B4D7E1041C28919C00ACAC3C /* PonyFaceDetailViewController.m */,
-				B4D7E1061C28989200ACAC3C /* PonyFacesTagsView.h */,
-				B4D7E1071C28989200ACAC3C /* PonyFacesTagsView.m */,
 			);
 			path = PonyFaces;
 			sourceTree = "<group>";
@@ -133,8 +168,28 @@
 				B4D7E10B1C28A10B00ACAC3C /* 748-heart@3x.png */,
 				B424ACD11C2876E1001C05A1 /* Warnings.xcconfig */,
 				B424ACB81C28769A001C05A1 /* main.m */,
+				B4D7E10F1C28A3CA00ACAC3C /* PonyFacesFavorites.xcdatamodeld */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B4D7E1171C28A52200ACAC3C /* FavoritesModel */ = {
+			isa = PBXGroup;
+			children = (
+				B4D7E1181C28A52200ACAC3C /* _FavoritePonyFace.h */,
+				B4D7E1191C28A52200ACAC3C /* _FavoritePonyFace.m */,
+				B4D7E11A1C28A52200ACAC3C /* _FavoritePonyFaceCategory.h */,
+				B4D7E11B1C28A52200ACAC3C /* _FavoritePonyFaceCategory.m */,
+				B4D7E11C1C28A52200ACAC3C /* _FavoritePonyFaceTag.h */,
+				B4D7E11D1C28A52200ACAC3C /* _FavoritePonyFaceTag.m */,
+				B4D7E11E1C28A52200ACAC3C /* FavoritePonyFace.h */,
+				B4D7E11F1C28A52200ACAC3C /* FavoritePonyFace.m */,
+				B4D7E1201C28A52200ACAC3C /* FavoritePonyFaceCategory.h */,
+				B4D7E1211C28A52200ACAC3C /* FavoritePonyFaceCategory.m */,
+				B4D7E1221C28A52200ACAC3C /* FavoritePonyFaceTag.h */,
+				B4D7E1231C28A52200ACAC3C /* FavoritePonyFaceTag.m */,
+			);
+			path = FavoritesModel;
 			sourceTree = "<group>";
 		};
 		C72970DC69F85EC6086ADEE7 /* Frameworks */ = {
@@ -189,6 +244,9 @@
 					B424ACB31C28769A001C05A1 = {
 						CreatedOnToolsVersion = 7.2;
 					};
+					B4D7E1121C28A4CE00ACAC3C = {
+						CreatedOnToolsVersion = 7.2;
+					};
 				};
 			};
 			buildConfigurationList = B424ACAF1C28769A001C05A1 /* Build configuration list for PBXProject "PonyFaces" */;
@@ -205,6 +263,7 @@
 			projectRoot = "";
 			targets = (
 				B424ACB31C28769A001C05A1 /* PonyFaces */,
+				B4D7E1121C28A4CE00ACAC3C /* Mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -256,6 +315,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		B4D7E1161C28A4D400ACAC3C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/mogenerator --v2 -m PonyFaces/PonyFacesFavorites.xcdatamodeld -O PonyFaces/FavoritesModel\n";
+		};
 		CC90923C864A9768655CCF38 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,12 +350,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4D7E1251C28A52200ACAC3C /* _FavoritePonyFaceCategory.m in Sources */,
 				B4D7E0F91C28810700ACAC3C /* PonyFacesTableViewController.m in Sources */,
+				B4D7E1271C28A52200ACAC3C /* FavoritePonyFace.m in Sources */,
 				B424ACBC1C28769A001C05A1 /* AppDelegate.m in Sources */,
+				B4D7E1261C28A52200ACAC3C /* _FavoritePonyFaceTag.m in Sources */,
+				B4D7E1291C28A52200ACAC3C /* FavoritePonyFaceTag.m in Sources */,
 				B4D7E0F61C287B3700ACAC3C /* PonyFacesAPI.m in Sources */,
 				B4D7E1081C28989200ACAC3C /* PonyFacesTagsView.m in Sources */,
+				B4D7E1281C28A52200ACAC3C /* FavoritePonyFaceCategory.m in Sources */,
 				B4D7E0F01C2877BE00ACAC3C /* PonyFaceCategory.m in Sources */,
+				B4D7E1241C28A52200ACAC3C /* _FavoritePonyFace.m in Sources */,
 				B4D7E1051C28919C00ACAC3C /* PonyFaceDetailViewController.m in Sources */,
+				B4D7E1111C28A3CA00ACAC3C /* PonyFacesFavorites.xcdatamodeld in Sources */,
 				B4D7E0FF1C2881AF00ACAC3C /* PonyFaceSearchResultsDataSource.m in Sources */,
 				B4D7E0F31C28784100ACAC3C /* PonyFace.m in Sources */,
 				B424ACB91C28769A001C05A1 /* main.m in Sources */,
@@ -420,6 +499,20 @@
 			};
 			name = Release;
 		};
+		B4D7E1141C28A4CE00ACAC3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B4D7E1151C28A4CE00ACAC3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -441,7 +534,28 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		B4D7E1131C28A4CE00ACAC3C /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4D7E1141C28A4CE00ACAC3C /* Debug */,
+				B4D7E1151C28A4CE00ACAC3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B4D7E10F1C28A3CA00ACAC3C /* PonyFacesFavorites.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B4D7E1101C28A3CA00ACAC3C /* PonyFacesFavorites.xcdatamodel */,
+			);
+			currentVersion = B4D7E1101C28A3CA00ACAC3C /* PonyFacesFavorites.xcdatamodel */;
+			path = PonyFacesFavorites.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B424ACAC1C28769A001C05A1 /* Project object */;
 }
