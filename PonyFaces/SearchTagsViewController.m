@@ -22,9 +22,9 @@ static NSString* const ShowSearchResultsSegue = @"ShowSearchResults";
 
 @implementation SearchTagsViewController
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-	[super viewDidAppear:animated];
+	[super viewWillAppear:animated];
 
 	self.searchTextField.enabled = YES;
 	self.searchResults = nil;
