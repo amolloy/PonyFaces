@@ -130,22 +130,38 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="0.0" placeholderIntrinsicHeight="98" translatesAutoresizingMaskIntoConstraints="NO" id="fHK-zu-hFZ" customClass="BENTagsView">
+                                            <rect key="frame" x="136" y="48.5" width="0.0" height="30"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="Bzi-WV-5ds"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="fHK-zu-hFZ" firstAttribute="leading" secondItem="Kx0-pA-Rmu" secondAttribute="trailing" constant="8" symbolic="YES" id="0x1-os-Tqy"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="fHK-zu-hFZ" secondAttribute="bottom" id="4vF-Cg-BhC"/>
                                         <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Pr3-2x-6Lw" secondAttribute="trailing" id="6Rn-b5-nUS"/>
                                         <constraint firstItem="Pr3-2x-6Lw" firstAttribute="leading" secondItem="Kx0-pA-Rmu" secondAttribute="trailing" constant="8" id="H7d-3Z-0aw"/>
                                         <constraint firstItem="g3e-5L-dDo" firstAttribute="centerY" secondItem="Kx0-pA-Rmu" secondAttribute="centerY" id="HCn-R5-abV"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Kx0-pA-Rmu" secondAttribute="bottom" id="IOC-jn-Xo7"/>
                                         <constraint firstAttribute="topMargin" secondItem="Pr3-2x-6Lw" secondAttribute="top" id="LeA-9f-PKs"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="fHK-zu-hFZ" secondAttribute="trailing" id="agP-EQ-8iq"/>
                                         <constraint firstAttribute="topMargin" secondItem="Kx0-pA-Rmu" secondAttribute="top" id="dVL-e2-6jZ"/>
+                                        <constraint firstItem="fHK-zu-hFZ" firstAttribute="top" secondItem="Pr3-2x-6Lw" secondAttribute="bottom" constant="8" symbolic="YES" id="kG3-OB-6Po"/>
                                         <constraint firstItem="g3e-5L-dDo" firstAttribute="centerX" secondItem="Kx0-pA-Rmu" secondAttribute="centerX" id="mma-Pj-5NO"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="Kx0-pA-Rmu" secondAttribute="leading" id="pTm-Ge-mv0"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="4vF-Cg-BhC"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.91959136724472046" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="activityIndicatorView" destination="g3e-5L-dDo" id="Sgh-9w-f7O"/>
                                     <outlet property="categoryLabel" destination="Pr3-2x-6Lw" id="SNO-OT-rfo"/>
+                                    <outlet property="tagsView" destination="fHK-zu-hFZ" id="1Jj-p2-nrs"/>
                                     <outlet property="thumbnailView" destination="Kx0-pA-Rmu" id="Q97-AJ-f56"/>
                                 </connections>
                             </tableViewCell>

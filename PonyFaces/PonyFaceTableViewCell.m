@@ -10,14 +10,23 @@
 #import "PonyFace.h"
 #import "PonyFaceCategory.h"
 #import "UIImageView+PINRemoteImage.h"
+#import "BENTagsView.h"
 
 @interface PonyFaceTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel* categoryLabel;
 @property (weak, nonatomic) IBOutlet UIImageView* thumbnailView;
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView* activityIndicatorView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView* activityIndicatorView;
+@property (weak, nonatomic) IBOutlet BENTagsView* tagsView;
 @end
 
 @implementation PonyFaceTableViewCell
+
+- (void)awakeFromNib
+{
+	[self.tagsView setFont:[UIFont systemFontOfSize:16]];
+	[self.tagsView setTagCornerRadius:8];
+	[self.tagsView setOffColor:[UIColor purpleColor]];
+}
 
 - (void)prepareForReuse
 {
@@ -33,6 +42,7 @@
 	[self.thumbnailView pin_setImageFromURL:ponyFace.thumbnailURL completion:^(PINRemoteImageManagerResult *result) {
 		[self.activityIndicatorView stopAnimating];
 	}];
+	[self.tagsView setTagStrings:ponyFace.tags];
 }
 
 @end
