@@ -4,5 +4,5 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target :PonyFaces do
 	pod 'PINRemoteImage'
-	pod 'BENTagsView'
+	pod 'SKTagView'
 end

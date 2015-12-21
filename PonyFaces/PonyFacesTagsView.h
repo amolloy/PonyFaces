@@ -6,8 +6,10 @@
 //  Copyright © 2015 Andy Molloy. All rights reserved.
 //
 
-#import <BENTagsView/BENTagsView.h>
+#import <SKTagView/SKTagView.h>
 
-@interface PonyFacesTagsView : BENTagsView
+@interface PonyFacesTagsView : SKTagView
+
+- (void)setTagStrings:(NSArray<NSString*>*)tagStrings;
 
 @end

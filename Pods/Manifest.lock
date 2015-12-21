@@ -1,6 +1,6 @@
 PODS:
-  - BENTagsView (0.9.0)
   - FLAnimatedImage (1.0.10)
+  - Masonry (0.6.3)
   - PINCache (2.1.2)
   - PINRemoteImage (1.2.2):
     - PINRemoteImage/FLAnimatedImage (= 1.2.2)
@@ -9,15 +9,18 @@ PODS:
   - PINRemoteImage/FLAnimatedImage (1.2.2):
     - FLAnimatedImage (>= 1.0)
     - PINRemoteImage/Core
+  - SKTagView (0.7):
+    - Masonry
 
 DEPENDENCIES:
-  - BENTagsView
   - PINRemoteImage
+  - SKTagView
 
 SPEC CHECKSUMS:
-  BENTagsView: 1a6ade3a65b7e677ea7482c1c08983ab4db532d5
   FLAnimatedImage: e16a1e1cef08e4c509b47e4acbe3923f65c16135
+  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
   PINCache: 9e70271f1bdd60c0465b7208adcc4b6acc1fc376
   PINRemoteImage: 9f6f484bbceee15e2df5aee0beeac2e261e4ac81
+  SKTagView: 1e89c1ce2292cf890610901d3621c55d1ed82379
 
 COCOAPODS: 0.39.0
