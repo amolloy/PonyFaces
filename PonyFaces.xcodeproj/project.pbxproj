@@ -45,6 +45,7 @@
 		B4D7E1271C28A52200ACAC3C /* FavoritePonyFace.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E11F1C28A52200ACAC3C /* FavoritePonyFace.m */; };
 		B4D7E1281C28A52200ACAC3C /* FavoritePonyFaceCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E1211C28A52200ACAC3C /* FavoritePonyFaceCategory.m */; };
 		B4D7E1291C28A52200ACAC3C /* FavoritePonyFaceTag.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E1231C28A52200ACAC3C /* FavoritePonyFaceTag.m */; };
+		B4D7E12F1C28A63600ACAC3C /* FavoritePonyFacesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E12E1C28A63600ACAC3C /* FavoritePonyFacesManager.m */; };
 		CBF30C2EAF8A767C72E1FE9E /* libPods-PonyFaces.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 603FBB8F15F98E55CFE95191 /* libPods-PonyFaces.a */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,8 @@
 		B4D7E1211C28A52200ACAC3C /* FavoritePonyFaceCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritePonyFaceCategory.m; sourceTree = "<group>"; };
 		B4D7E1221C28A52200ACAC3C /* FavoritePonyFaceTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritePonyFaceTag.h; sourceTree = "<group>"; };
 		B4D7E1231C28A52200ACAC3C /* FavoritePonyFaceTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritePonyFaceTag.m; sourceTree = "<group>"; };
+		B4D7E12D1C28A63600ACAC3C /* FavoritePonyFacesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritePonyFacesManager.h; sourceTree = "<group>"; };
+		B4D7E12E1C28A63600ACAC3C /* FavoritePonyFacesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritePonyFacesManager.m; sourceTree = "<group>"; };
 		B6E42F6C27DF1F60B936C8ED /* Pods-PonyFaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PonyFaces.release.xcconfig"; path = "Pods/Target Support Files/Pods-PonyFaces/Pods-PonyFaces.release.xcconfig"; sourceTree = "<group>"; };
 		DCA0738139A4CAB430CC39FE /* Pods-PonyFaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PonyFaces.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PonyFaces/Pods-PonyFaces.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +136,8 @@
 				B424ACBA1C28769A001C05A1 /* AppDelegate.h */,
 				B424ACBB1C28769A001C05A1 /* AppDelegate.m */,
 				B424ACC61C28769A001C05A1 /* Assets.xcassets */,
+				B4D7E12D1C28A63600ACAC3C /* FavoritePonyFacesManager.h */,
+				B4D7E12E1C28A63600ACAC3C /* FavoritePonyFacesManager.m */,
 				B4D7E1171C28A52200ACAC3C /* FavoritesModel */,
 				B424ACCB1C28769A001C05A1 /* Info.plist */,
 				B424ACC81C28769A001C05A1 /* LaunchScreen.storyboard */,
@@ -358,6 +363,7 @@
 				B4D7E1291C28A52200ACAC3C /* FavoritePonyFaceTag.m in Sources */,
 				B4D7E0F61C287B3700ACAC3C /* PonyFacesAPI.m in Sources */,
 				B4D7E1081C28989200ACAC3C /* PonyFacesTagsView.m in Sources */,
+				B4D7E12F1C28A63600ACAC3C /* FavoritePonyFacesManager.m in Sources */,
 				B4D7E1281C28A52200ACAC3C /* FavoritePonyFaceCategory.m in Sources */,
 				B4D7E0F01C2877BE00ACAC3C /* PonyFaceCategory.m in Sources */,
 				B4D7E1241C28A52200ACAC3C /* _FavoritePonyFace.m in Sources */,
@@ -541,6 +547,7 @@
 				B4D7E1151C28A4CE00ACAC3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
