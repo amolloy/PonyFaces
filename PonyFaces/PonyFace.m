@@ -22,7 +22,7 @@
 
 - (instancetype)initWithID:(NSInteger)ponyID
 				  category:(PonyFaceCategory*)category
-					  tags:(NSArray*)tags
+					  tags:(NSArray<NSString*>*)tags
 			  thumbnailURL:(NSURL*)thumbnailURL
 				  imageURL:(NSURL*)imageURL
 					  link:(NSURL*)link
@@ -44,7 +44,7 @@
 
 + (instancetype)ponyFaceWithID:(NSInteger)ponyID
 					  category:(PonyFaceCategory*)category
-						  tags:(NSArray*)tags
+						  tags:(NSArray<NSString*>*)tags
 				  thumbnailURL:(NSURL*)thumbnailURL
 					  imageURL:(NSURL*)imageURL
 						  link:(NSURL*)link

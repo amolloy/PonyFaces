@@ -13,7 +13,7 @@
 @interface PonyFace : NSObject
 @property (nonatomic, assign, readonly) NSInteger ponyID;
 @property (nonatomic, weak, readonly) PonyFaceCategory* category;
-@property (nonatomic, copy, readonly) NSArray* tags;
+@property (nonatomic, copy, readonly) NSArray<NSString*>* tags;
 @property (nonatomic, strong, readonly) NSURL* thumbnailURL;
 @property (nonatomic, strong, readonly) NSURL* imageURL;
 @property (nonatomic, strong, readonly) NSURL* link;
@@ -21,14 +21,14 @@
 
 + (instancetype)ponyFaceWithID:(NSInteger)ponyID
 					  category:(PonyFaceCategory*)category
-						  tags:(NSArray*)tags
+						  tags:(NSArray<NSString*>*)tags
 				  thumbnailURL:(NSURL*)thumbnailURL
 					  imageURL:(NSURL*)imageURL
 						  link:(NSURL*)link
 					   enabled:(BOOL)enabled;
 - (instancetype)initWithID:(NSInteger)ponyID
 				  category:(PonyFaceCategory*)category
-					  tags:(NSArray*)tags
+					  tags:(NSArray<NSString*>*)tags
 			  thumbnailURL:(NSURL*)thumbnailURL
 				  imageURL:(NSURL*)imageURL
 					  link:(NSURL*)link
