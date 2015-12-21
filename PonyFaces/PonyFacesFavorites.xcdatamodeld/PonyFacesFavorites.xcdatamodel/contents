@@ -3,14 +3,14 @@
     <entity name="FavoritePonyFace" representedClassName="FavoritePonyFace" syncable="YES">
         <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="ponyID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="ponyID" attributeType="Integer 64" indexed="YES" syncable="YES"/>
         <attribute name="thumbnailURL" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FavoritePonyFaceCategory" inverseName="ponyFaces" inverseEntity="FavoritePonyFaceCategory" syncable="YES"/>
         <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FavoritePonyFaceTag" inverseName="ponyFaces" inverseEntity="FavoritePonyFaceTag" syncable="YES"/>
     </entity>
     <entity name="FavoritePonyFaceCategory" representedClassName="FavoritePonyFaceCategory" syncable="YES">
-        <attribute name="categoryID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryID" attributeType="Integer 64" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
         <relationship name="ponyFaces" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FavoritePonyFace" inverseName="category" inverseEntity="FavoritePonyFace" syncable="YES"/>
     </entity>
     <entity name="FavoritePonyFaceTag" representedClassName="FavoritePonyFaceTag" syncable="YES">
