@@ -114,6 +114,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="154.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="g3e-5L-dDo">
+                                            <rect key="frame" x="50" y="59" width="37" height="37"/>
+                                        </activityIndicatorView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kx0-pA-Rmu">
                                             <rect key="frame" x="8" y="8" width="120" height="138.5"/>
                                             <constraints>
@@ -131,13 +134,17 @@
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Pr3-2x-6Lw" secondAttribute="trailing" id="6Rn-b5-nUS"/>
                                         <constraint firstItem="Pr3-2x-6Lw" firstAttribute="leading" secondItem="Kx0-pA-Rmu" secondAttribute="trailing" constant="8" id="H7d-3Z-0aw"/>
+                                        <constraint firstItem="g3e-5L-dDo" firstAttribute="centerY" secondItem="Kx0-pA-Rmu" secondAttribute="centerY" id="HCn-R5-abV"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Kx0-pA-Rmu" secondAttribute="bottom" id="IOC-jn-Xo7"/>
                                         <constraint firstAttribute="topMargin" secondItem="Pr3-2x-6Lw" secondAttribute="top" id="LeA-9f-PKs"/>
                                         <constraint firstAttribute="topMargin" secondItem="Kx0-pA-Rmu" secondAttribute="top" id="dVL-e2-6jZ"/>
+                                        <constraint firstItem="g3e-5L-dDo" firstAttribute="centerX" secondItem="Kx0-pA-Rmu" secondAttribute="centerX" id="mma-Pj-5NO"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="Kx0-pA-Rmu" secondAttribute="leading" id="pTm-Ge-mv0"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.91959136724472046" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
+                                    <outlet property="activityIndicatorView" destination="g3e-5L-dDo" id="Sgh-9w-f7O"/>
                                     <outlet property="categoryLabel" destination="Pr3-2x-6Lw" id="SNO-OT-rfo"/>
                                     <outlet property="thumbnailView" destination="Kx0-pA-Rmu" id="Q97-AJ-f56"/>
                                 </connections>
