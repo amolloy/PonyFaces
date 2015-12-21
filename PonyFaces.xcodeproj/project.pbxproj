@@ -14,6 +14,7 @@
 		B424ACCA1C28769A001C05A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B424ACC81C28769A001C05A1 /* LaunchScreen.storyboard */; };
 		B4D7E0F01C2877BE00ACAC3C /* PonyFaceCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E0EF1C2877BE00ACAC3C /* PonyFaceCategory.m */; };
 		B4D7E0F31C28784100ACAC3C /* PonyFace.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E0F21C28784100ACAC3C /* PonyFace.m */; };
+		B4D7E0F61C287B3700ACAC3C /* PonyFacesAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E0F51C287B3700ACAC3C /* PonyFacesAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		B4D7E0EF1C2877BE00ACAC3C /* PonyFaceCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PonyFaceCategory.m; sourceTree = "<group>"; };
 		B4D7E0F11C28784100ACAC3C /* PonyFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PonyFace.h; sourceTree = "<group>"; };
 		B4D7E0F21C28784100ACAC3C /* PonyFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PonyFace.m; sourceTree = "<group>"; };
+		B4D7E0F41C287B3700ACAC3C /* PonyFacesAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PonyFacesAPI.h; sourceTree = "<group>"; };
+		B4D7E0F51C287B3700ACAC3C /* PonyFacesAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PonyFacesAPI.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				B4D7E0F21C28784100ACAC3C /* PonyFace.m */,
 				B4D7E0EE1C2877BE00ACAC3C /* PonyFaceCategory.h */,
 				B4D7E0EF1C2877BE00ACAC3C /* PonyFaceCategory.m */,
+				B4D7E0F41C287B3700ACAC3C /* PonyFacesAPI.h */,
+				B4D7E0F51C287B3700ACAC3C /* PonyFacesAPI.m */,
 				B424ACB71C28769A001C05A1 /* Supporting Files */,
 			);
 			path = PonyFaces;
@@ -157,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B424ACBC1C28769A001C05A1 /* AppDelegate.m in Sources */,
+				B4D7E0F61C287B3700ACAC3C /* PonyFacesAPI.m in Sources */,
 				B4D7E0F01C2877BE00ACAC3C /* PonyFaceCategory.m in Sources */,
 				B4D7E0F31C28784100ACAC3C /* PonyFace.m in Sources */,
 				B424ACB91C28769A001C05A1 /* main.m in Sources */,
