@@ -36,7 +36,7 @@
 	return [[self alloc] initWithID:categoryID name:name];
 }
 
-- (void)addPonyFaceWithId:(NSInteger)ponyID
+- (void)addPonyFaceWithID:(NSInteger)ponyID
 					 tags:(NSArray*)tags
 			 thumbnailURL:(NSURL*)thumbnailURL
 				 imageURL:(NSURL*)imageURL
