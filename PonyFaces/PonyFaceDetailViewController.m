@@ -10,14 +10,14 @@
 #import "PonyFace.h"
 #import "PonyFaceCategory.h"
 #import "UIImageView+PINRemoteImage.h"
-#import "BENTagsView.h"
+#import "PonyFacesTagsView.h"
 
 static void* const sPonyFaceObvserverContext = (void*)&sPonyFaceObvserverContext;
 
 @interface PonyFaceDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel* categoryLabel;
 @property (weak, nonatomic) IBOutlet UIImageView* imageView;
-@property (weak, nonatomic) IBOutlet BENTagsView* tagsView;
+@property (weak, nonatomic) IBOutlet PonyFacesTagsView* tagsView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView* activityIndicatorView;
 
 @end
