@@ -7,6 +7,11 @@
 //
 
 #import "FavoritePonyFacesManager.h"
+#import "PonyFace.h"
+#import "PonyFaceCategory.h"
+#import "FavoritePonyFace.h"
+#import "FavoritePonyFaceCategory.h"
+#import "FavoritePonyFaceTag.h"
 #import <MagicalRecord/MagicalRecord.h>
 
 @implementation FavoritePonyFacesManager
@@ -19,6 +24,49 @@
 - (void)cleanUp
 {
 	[MagicalRecord cleanUp];
+}
+
+- (void)addFavoritePonyFace:(PonyFace*)ponyFace
+{
+	[MagicalRecord saveWithBlock:^(NSManagedObjectContext* localContext) {
+		FavoritePonyFace* favoritePonyFace = [FavoritePonyFace MR_createEntityInContext:localContext];
+		favoritePonyFace.ponyID = @(ponyFace.ponyID);
+		favoritePonyFace.category = [self findOrCreateCategoryForPonyFace:ponyFace
+																inContext:localContext];
+		favoritePonyFace.thumbnailURL = [ponyFace.thumbnailURL absoluteString];
+		favoritePonyFace.imageURL = [ponyFace.imageURL absoluteString];
+		favoritePonyFace.link = [ponyFace.link absoluteString];
+
+		for (NSString* tag in ponyFace.tags)
+		{
+			FavoritePonyFaceTag* favoriteTag = [FavoritePonyFaceTag MR_findFirstOrCreateByAttribute:@"name"
+																						  withValue:tag
+																						  inContext:localContext];
+			[favoritePonyFace addTagsObject:favoriteTag];
+		}
+	}];
+}
+
+- (FavoritePonyFaceCategory*)findOrCreateCategoryForPonyFace:(PonyFace*)ponyFace
+												   inContext:(NSManagedObjectContext*)context
+{
+	PonyFaceCategory* ponyFaceCategory = ponyFace.category;
+	FavoritePonyFaceCategory* category = [FavoritePonyFaceCategory MR_findFirstByAttribute:@"categoryID"
+																				 withValue:@(ponyFaceCategory.categoryID)
+																				 inContext:context];
+	if (!category)
+	{
+		category = [FavoritePonyFaceCategory MR_createEntityInContext:context];
+		category.categoryID = @(ponyFaceCategory.categoryID);
+		category.name = ponyFaceCategory.name;
+	}
+
+	return category;
+}
+
+- (BOOL)isPonyFaceAFavorite:(PonyFace*)ponyFace
+{
+	return [FavoritePonyFace MR_countOfEntitiesWithPredicate:[NSPredicate predicateWithFormat:@"ponyID=%d", ponyFace.ponyID]] != 0;
 }
 
 #pragma mark - Singleton

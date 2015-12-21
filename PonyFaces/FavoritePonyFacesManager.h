@@ -8,11 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class PonyFace;
+
 @interface FavoritePonyFacesManager : NSObject
 
 + (id)sharedManager;
 
 - (void)setupCoreDataStack;
 - (void)cleanUp;
+
+- (void)addFavoritePonyFace:(PonyFace*)ponyFace;
+- (BOOL)isPonyFaceAFavorite:(PonyFace*)ponyFace;
 
 @end
