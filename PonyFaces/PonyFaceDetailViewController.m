@@ -11,6 +11,7 @@
 #import "PonyFaceCategory.h"
 #import "UIImageView+PINRemoteImage.h"
 #import "PonyFacesTagsView.h"
+#import "FavoritePonyFacesManager.h"
 
 static void* const sPonyFaceObvserverContext = (void*)&sPonyFaceObvserverContext;
 
@@ -19,7 +20,7 @@ static void* const sPonyFaceObvserverContext = (void*)&sPonyFaceObvserverContext
 @property (weak, nonatomic) IBOutlet UIImageView* imageView;
 @property (weak, nonatomic) IBOutlet PonyFacesTagsView* tagsView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView* activityIndicatorView;
-
+@property (weak, nonatomic) IBOutlet UIButton* favoriteButton;
 @end
 
 @implementation PonyFaceDetailViewController
@@ -40,6 +41,12 @@ static void* const sPonyFaceObvserverContext = (void*)&sPonyFaceObvserverContext
 			  forKeyPath:@"ponyFace"];
 }
 
+- (IBAction)favorite:(id)sender
+{
+	[[FavoritePonyFacesManager sharedManager] addFavoritePonyFace:self.ponyFace];
+	self.favoriteButton.enabled = NO; // TODO make this a toggle.
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
 {
 	if (sPonyFaceObvserverContext == context)
@@ -52,12 +59,23 @@ static void* const sPonyFaceObvserverContext = (void*)&sPonyFaceObvserverContext
 				[self.activityIndicatorView stopAnimating];
 			}];
 			[self.tagsView setTagStrings:self.ponyFace.tags];
+
+			if ([[FavoritePonyFacesManager sharedManager] isPonyFaceAFavorite:self.ponyFace])
+			{
+				// TODO Make this a toggle.
+				self.favoriteButton.enabled = NO;
+			}
+			else
+			{
+				self.favoriteButton.enabled = YES;
+			}
 		}
 		else
 		{
 			self.categoryLabel.text = @"";
 			self.imageView.image = nil;
 			[self.tagsView setTagStrings:@[]];
+			self.favoriteButton.enabled = NO;
 		}
 	}
 }

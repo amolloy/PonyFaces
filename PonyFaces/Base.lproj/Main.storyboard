@@ -216,6 +216,9 @@
                                         <rect key="frame" x="72" y="0.0" width="44" height="41"/>
                                         <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                                         <state key="normal" image="748-heart.png"/>
+                                        <connections>
+                                            <action selector="favorite:" destination="HT0-7o-0PG" eventType="touchUpInside" id="x7c-QS-wbv"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVx-dN-MoZ">
                                         <rect key="frame" x="0.0" y="4" width="64" height="32.5"/>
@@ -266,6 +269,7 @@
                     <connections>
                         <outlet property="activityIndicatorView" destination="qtd-am-p7M" id="1wV-Y6-ceh"/>
                         <outlet property="categoryLabel" destination="uVx-dN-MoZ" id="OLS-92-v1K"/>
+                        <outlet property="favoriteButton" destination="MPL-6G-ou5" id="KRt-mo-uoK"/>
                         <outlet property="imageView" destination="ALu-aK-gcc" id="qsM-v3-fBU"/>
                         <outlet property="tagsView" destination="ZBH-Jl-Zri" id="fYp-rt-wRg"/>
                     </connections>
