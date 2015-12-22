@@ -12,6 +12,9 @@
 #import "UIImageView+PINRemoteImage.h"
 #import "PonyFacesTagsView.h"
 #import "FavoritePonyFacesManager.h"
+#import "FavoritePonyFace.h"
+#import "SYFavoriteButton.h"
+#import <MagicalRecord/MagicalRecord.h>
 
 static void* const sPonyFaceObvserverContext = (void*)&sPonyFaceObvserverContext;
 
@@ -20,7 +23,8 @@ static void* const sPonyFaceObvserverContext = (void*)&sPonyFaceObvserverContext
 @property (weak, nonatomic) IBOutlet UIImageView* imageView;
 @property (weak, nonatomic) IBOutlet PonyFacesTagsView* tagsView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView* activityIndicatorView;
-@property (weak, nonatomic) IBOutlet UIButton* favoriteButton;
+@property (weak, nonatomic) IBOutlet SYFavoriteButton* favoriteButton;
+@property (strong, nonatomic) NSManagedObjectContext* managedObjectContext;
 @end
 
 @implementation PonyFaceDetailViewController
@@ -28,6 +32,9 @@ static void* const sPonyFaceObvserverContext = (void*)&sPonyFaceObvserverContext
 - (void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
+
+	self.managedObjectContext = [NSManagedObjectContext MR_context];
+
 	[self addObserver:self
 		   forKeyPath:@"ponyFace"
 			  options:NSKeyValueObservingOptionInitial
@@ -39,12 +46,31 @@ static void* const sPonyFaceObvserverContext = (void*)&sPonyFaceObvserverContext
 	[super viewWillDisappear:animated];
 	[self removeObserver:self
 			  forKeyPath:@"ponyFace"];
+
+	[self.managedObjectContext MR_saveToPersistentStoreWithCompletion:^(BOOL contextDidSave, NSError* error) {
+		if (!contextDidSave && error)
+		{
+			NSLog(@"Couldn't save changes: %@", error);
+		}
+	}];
 }
 
 - (IBAction)favorite:(id)sender
 {
-	[[FavoritePonyFacesManager sharedManager] addFavoritePonyFace:self.ponyFace];
-	self.favoriteButton.enabled = NO; // TODO make this a toggle.
+	BOOL isFavorite = [[FavoritePonyFacesManager sharedManager] isPonyFaceAFavorite:self.ponyFace
+															   managedObjectContext:self.managedObjectContext];
+	if (isFavorite)
+	{
+		[[FavoritePonyFacesManager sharedManager] deleteFavoritePonyFace:self.ponyFace
+													managedObjectContext:self.managedObjectContext];
+	}
+	else
+	{
+		[[FavoritePonyFacesManager sharedManager] addFavoritePonyFace:self.ponyFace
+												 managedObjectContext:self.managedObjectContext];
+	}
+
+	[self.favoriteButton setSelected:!isFavorite];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
@@ -60,15 +86,10 @@ static void* const sPonyFaceObvserverContext = (void*)&sPonyFaceObvserverContext
 			}];
 			[self.tagsView setTagStrings:self.ponyFace.tags];
 
-			if ([[FavoritePonyFacesManager sharedManager] isPonyFaceAFavorite:self.ponyFace])
-			{
-				// TODO Make this a toggle.
-				self.favoriteButton.enabled = NO;
-			}
-			else
-			{
-				self.favoriteButton.enabled = YES;
-			}
+			BOOL isFavorite = [[FavoritePonyFacesManager sharedManager] isPonyFaceAFavorite:self.ponyFace
+																	   managedObjectContext:self.managedObjectContext];
+			[self.favoriteButton setSelected:isFavorite];
+			self.favoriteButton.enabled = YES;
 		}
 		else
 		{

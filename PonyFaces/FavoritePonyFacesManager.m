@@ -26,37 +26,36 @@
 	[MagicalRecord cleanUp];
 }
 
-- (void)addFavoritePonyFace:(PonyFace*)ponyFace
+- (void)addFavoritePonyFace:(id<PonyFaceModel>)ponyFace
+	   managedObjectContext:(NSManagedObjectContext*)moc
 {
-	[MagicalRecord saveWithBlock:^(NSManagedObjectContext* localContext) {
-		FavoritePonyFace* favoritePonyFace = [FavoritePonyFace MR_createEntityInContext:localContext];
-		favoritePonyFace.ponyID = ponyFace.ponyID;
-		favoritePonyFace.category = [self findOrCreateCategoryForPonyFace:ponyFace
-																inContext:localContext];
-		favoritePonyFace.thumbnailURLStr = [ponyFace.thumbnailURL absoluteString];
-		favoritePonyFace.imageURLStr = [ponyFace.imageURL absoluteString];
-		favoritePonyFace.linkStr = [ponyFace.link absoluteString];
+	FavoritePonyFace* favoritePonyFace = [FavoritePonyFace MR_createEntityInContext:moc];
+	favoritePonyFace.ponyID = ponyFace.ponyID;
+	favoritePonyFace.category = [self findOrCreateCategoryForPonyFace:ponyFace
+															inContext:moc];
+	favoritePonyFace.thumbnailURLStr = [ponyFace.thumbnailURL absoluteString];
+	favoritePonyFace.imageURLStr = [ponyFace.imageURL absoluteString];
+	favoritePonyFace.linkStr = [ponyFace.link absoluteString];
 
-		for (NSString* tag in ponyFace.tags)
-		{
-			FavoritePonyFaceTag* favoriteTag = [FavoritePonyFaceTag MR_findFirstOrCreateByAttribute:@"name"
-																						  withValue:tag
-																						  inContext:localContext];
-			[favoritePonyFace addTagObjectsObject:favoriteTag];
-		}
-	}];
+	for (NSString* tag in ponyFace.tags)
+	{
+		FavoritePonyFaceTag* favoriteTag = [FavoritePonyFaceTag MR_findFirstOrCreateByAttribute:@"name"
+																					  withValue:tag
+																					  inContext:moc];
+		[favoritePonyFace addTagObjectsObject:favoriteTag];
+	}
 }
 
 - (FavoritePonyFaceCategory*)findOrCreateCategoryForPonyFace:(PonyFace*)ponyFace
-												   inContext:(NSManagedObjectContext*)context
+												   inContext:(NSManagedObjectContext*)moc
 {
 	PonyFaceCategory* ponyFaceCategory = ponyFace.category;
 	FavoritePonyFaceCategory* category = [FavoritePonyFaceCategory MR_findFirstByAttribute:@"categoryID"
 																				 withValue:@(ponyFaceCategory.categoryID)
-																				 inContext:context];
+																				 inContext:moc];
 	if (!category)
 	{
-		category = [FavoritePonyFaceCategory MR_createEntityInContext:context];
+		category = [FavoritePonyFaceCategory MR_createEntityInContext:moc];
 		category.categoryID = @(ponyFaceCategory.categoryID);
 		category.name = ponyFaceCategory.name;
 	}
@@ -64,9 +63,16 @@
 	return category;
 }
 
-- (BOOL)isPonyFaceAFavorite:(id<PonyFaceModel>)ponyFace
+- (BOOL)isPonyFaceAFavorite:(id<PonyFaceModel>)ponyFace managedObjectContext:(NSManagedObjectContext*)moc
 {
-	return [FavoritePonyFace MR_countOfEntitiesWithPredicate:[NSPredicate predicateWithFormat:@"ponyID=%@", ponyFace.ponyID]] != 0;
+	return [FavoritePonyFace MR_countOfEntitiesWithPredicate:[NSPredicate predicateWithFormat:@"ponyID=%@", ponyFace.ponyID]
+												   inContext:moc] != 0;
+}
+
+- (void)deleteFavoritePonyFace:(id<PonyFaceModel>)ponyFace managedObjectContext:(NSManagedObjectContext*)moc
+{
+	[FavoritePonyFace MR_deleteAllMatchingPredicate:[NSPredicate predicateWithFormat:@"ponyID=%@", ponyFace.ponyID]
+										  inContext:moc];
 }
 
 #pragma mark - Singleton

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -211,12 +212,30 @@
                                 <color key="color" red="0.99228733777999878" green="0.0" blue="0.89954441785812378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="18L-WB-wsl">
-                                <rect key="frame" x="242" y="72" width="116" height="41"/>
+                                <rect key="frame" x="243.5" y="72" width="113" height="41"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPL-6G-ou5">
-                                        <rect key="frame" x="72" y="0.0" width="44" height="41"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPL-6G-ou5" customClass="SYFavoriteButton">
+                                        <rect key="frame" x="72" y="0.0" width="41" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="MPL-6G-ou5" secondAttribute="height" multiplier="1:1" id="FIi-Gi-ugZ"/>
+                                            <constraint firstAttribute="height" constant="41" id="YSQ-qT-h62"/>
+                                        </constraints>
                                         <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
-                                        <state key="normal" image="748-heart.png"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="SolidHeart.png"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="favoredColor">
+                                                <color key="value" red="0.99228733777999878" green="0.0" blue="0.89954441785812378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="defaultColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                                <color key="value" red="1" green="0.0" blue="0.91959136724472046" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                <color key="value" red="1" green="0.0" blue="0.91959136724472046" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="favorite:" destination="HT0-7o-0PG" eventType="touchUpInside" id="x7c-QS-wbv"/>
                                         </connections>
@@ -318,6 +337,7 @@
     </scenes>
     <resources>
         <image name="748-heart.png" width="28" height="25"/>
+        <image name="SolidHeart.png" width="28" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3mL-1w-zdP"/>

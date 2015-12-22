@@ -9,16 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "PonyFaceModel.h"
 
-@class PonyFace;
+@class NSManagedObjectContext;
 
 @interface FavoritePonyFacesManager : NSObject
-
 + (id)sharedManager;
 
 - (void)setupCoreDataStack;
 - (void)cleanUp;
 
-- (void)addFavoritePonyFace:(PonyFace*)ponyFace;
-- (BOOL)isPonyFaceAFavorite:(id<PonyFaceModel>)ponyFace;
-
+- (void)addFavoritePonyFace:(id<PonyFaceModel>)ponyFace managedObjectContext:(NSManagedObjectContext*)moc;
+- (BOOL)isPonyFaceAFavorite:(id<PonyFaceModel>)ponyFace managedObjectContext:(NSManagedObjectContext*)moc;
+- (void)deleteFavoritePonyFace:(id<PonyFaceModel>)ponyFace managedObjectContext:(NSManagedObjectContext*)moc;
 @end
