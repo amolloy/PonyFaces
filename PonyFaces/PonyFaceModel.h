@@ -10,4 +10,10 @@
 
 @protocol PonyFaceModel <NSObject>
 
+- (NSString*)categoryName;
+- (NSURL*)thumbnailURL;
+- (NSURL*)imageURL;
+- (NSURL*)link;
+- (NSArray<NSString*>*)tags;
+
 @end
