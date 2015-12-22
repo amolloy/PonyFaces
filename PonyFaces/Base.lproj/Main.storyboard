@@ -214,7 +214,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="18L-WB-wsl">
                                 <rect key="frame" x="243.5" y="72" width="113" height="41"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPL-6G-ou5" customClass="SYFavoriteButton">
+                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPL-6G-ou5" customClass="SYFavoriteButton">
                                         <rect key="frame" x="72" y="0.0" width="41" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="MPL-6G-ou5" secondAttribute="height" multiplier="1:1" id="FIi-Gi-ugZ"/>
