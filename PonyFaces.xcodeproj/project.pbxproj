@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		2386F12B8CC7DE6C28AFF781 /* Pods_PonyFaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91F9791F3CCE4097F3767CA /* Pods_PonyFaces.framework */; };
 		B424ACB91C28769A001C05A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B424ACB81C28769A001C05A1 /* main.m */; };
 		B424ACBC1C28769A001C05A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B424ACBB1C28769A001C05A1 /* AppDelegate.m */; };
 		B424ACC51C28769A001C05A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B424ACC31C28769A001C05A1 /* Main.storyboard */; };
@@ -51,11 +52,11 @@
 		B4DC40411C29F1E50097925A /* SolidHeart.png in Resources */ = {isa = PBXBuildFile; fileRef = B4DC403E1C29F1E50097925A /* SolidHeart.png */; };
 		B4DC40421C29F1E50097925A /* SolidHeart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4DC403F1C29F1E50097925A /* SolidHeart@2x.png */; };
 		B4DC40431C29F1E50097925A /* SolidHeart@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4DC40401C29F1E50097925A /* SolidHeart@3x.png */; };
-		CBF30C2EAF8A767C72E1FE9E /* libPods-PonyFaces.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 603FBB8F15F98E55CFE95191 /* libPods-PonyFaces.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		603FBB8F15F98E55CFE95191 /* libPods-PonyFaces.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PonyFaces.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13491F391C2AC97F93DC5CEB /* Pods-PonyFaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PonyFaces.release.xcconfig"; path = "Pods/Target Support Files/Pods-PonyFaces/Pods-PonyFaces.release.xcconfig"; sourceTree = "<group>"; };
+		518AFD2428EC11D4635E609C /* Pods-PonyFaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PonyFaces.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PonyFaces/Pods-PonyFaces.debug.xcconfig"; sourceTree = "<group>"; };
 		B424ACB41C28769A001C05A1 /* PonyFaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PonyFaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B424ACB81C28769A001C05A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B424ACBA1C28769A001C05A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,8 +110,7 @@
 		B4DC403E1C29F1E50097925A /* SolidHeart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SolidHeart.png; sourceTree = "<group>"; };
 		B4DC403F1C29F1E50097925A /* SolidHeart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SolidHeart@2x.png"; sourceTree = "<group>"; };
 		B4DC40401C29F1E50097925A /* SolidHeart@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SolidHeart@3x.png"; sourceTree = "<group>"; };
-		B6E42F6C27DF1F60B936C8ED /* Pods-PonyFaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PonyFaces.release.xcconfig"; path = "Pods/Target Support Files/Pods-PonyFaces/Pods-PonyFaces.release.xcconfig"; sourceTree = "<group>"; };
-		DCA0738139A4CAB430CC39FE /* Pods-PonyFaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PonyFaces.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PonyFaces/Pods-PonyFaces.debug.xcconfig"; sourceTree = "<group>"; };
+		B91F9791F3CCE4097F3767CA /* Pods_PonyFaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PonyFaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,20 +118,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBF30C2EAF8A767C72E1FE9E /* libPods-PonyFaces.a in Frameworks */,
+				2386F12B8CC7DE6C28AFF781 /* Pods_PonyFaces.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01B91F4F21A1C0E5EF5DC5F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				518AFD2428EC11D4635E609C /* Pods-PonyFaces.debug.xcconfig */,
+				13491F391C2AC97F93DC5CEB /* Pods-PonyFaces.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		685C0C7E70CC9457F2565061 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B91F9791F3CCE4097F3767CA /* Pods_PonyFaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B424ACAB1C28769A001C05A1 = {
 			isa = PBXGroup;
 			children = (
 				B424ACB61C28769A001C05A1 /* PonyFaces */,
 				B424ACB51C28769A001C05A1 /* Products */,
-				E03825BCE0E779F7F3B629DD /* Pods */,
-				C72970DC69F85EC6086ADEE7 /* Frameworks */,
+				01B91F4F21A1C0E5EF5DC5F2 /* Pods */,
+				685C0C7E70CC9457F2565061 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,23 +235,6 @@
 			path = FavoritesModel;
 			sourceTree = "<group>";
 		};
-		C72970DC69F85EC6086ADEE7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				603FBB8F15F98E55CFE95191 /* libPods-PonyFaces.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E03825BCE0E779F7F3B629DD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				DCA0738139A4CAB430CC39FE /* Pods-PonyFaces.debug.xcconfig */,
-				B6E42F6C27DF1F60B936C8ED /* Pods-PonyFaces.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -242,12 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B424ACCE1C28769A001C05A1 /* Build configuration list for PBXNativeTarget "PonyFaces" */;
 			buildPhases = (
-				6A2442458E3D95EA6C7F0F45 /* Check Pods Manifest.lock */,
+				FA1533D05C42355EB4E8AC17 /* Check Pods Manifest.lock */,
 				B424ACB01C28769A001C05A1 /* Sources */,
 				B424ACB11C28769A001C05A1 /* Frameworks */,
 				B424ACB21C28769A001C05A1 /* Resources */,
-				062599B2E8E6DC06A6037C89 /* Embed Pods Frameworks */,
-				CC90923C864A9768655CCF38 /* Copy Pods Resources */,
+				2E279F7ECC1D6F8CD1845B56 /* Embed Pods Frameworks */,
+				D9450F4DD813E9ABEBC8850B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,7 +314,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		062599B2E8E6DC06A6037C89 /* Embed Pods Frameworks */ = {
+		2E279F7ECC1D6F8CD1845B56 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -327,21 +327,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PonyFaces/Pods-PonyFaces-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6A2442458E3D95EA6C7F0F45 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B4D7E1161C28A4D400ACAC3C /* ShellScript */ = {
@@ -357,7 +342,7 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/mogenerator --v2 -m PonyFaces/PonyFacesFavorites.xcdatamodeld -O PonyFaces/FavoritesModel\n";
 		};
-		CC90923C864A9768655CCF38 /* Copy Pods Resources */ = {
+		D9450F4DD813E9ABEBC8850B /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -370,6 +355,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PonyFaces/Pods-PonyFaces-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA1533D05C42355EB4E8AC17 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -509,7 +509,7 @@
 		};
 		B424ACCF1C28769A001C05A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCA0738139A4CAB430CC39FE /* Pods-PonyFaces.debug.xcconfig */;
+			baseConfigurationReference = 518AFD2428EC11D4635E609C /* Pods-PonyFaces.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PonyFaces/Info.plist;
@@ -521,7 +521,7 @@
 		};
 		B424ACD01C28769A001C05A1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6E42F6C27DF1F60B936C8ED /* Pods-PonyFaces.release.xcconfig */;
+			baseConfigurationReference = 13491F391C2AC97F93DC5CEB /* Pods-PonyFaces.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PonyFaces/Info.plist;

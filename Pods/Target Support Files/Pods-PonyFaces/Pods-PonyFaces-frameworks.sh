@@ -82,3 +82,22 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-PonyFaces/FLAnimatedImage.framework"
+  install_framework "Pods-PonyFaces/MagicalRecord.framework"
+  install_framework "Pods-PonyFaces/Masonry.framework"
+  install_framework "Pods-PonyFaces/PINCache.framework"
+  install_framework "Pods-PonyFaces/PINRemoteImage.framework"
+  install_framework "Pods-PonyFaces/SKTagView.framework"
+  install_framework "Pods-PonyFaces/SYFavoriteButton.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-PonyFaces/FLAnimatedImage.framework"
+  install_framework "Pods-PonyFaces/MagicalRecord.framework"
+  install_framework "Pods-PonyFaces/Masonry.framework"
+  install_framework "Pods-PonyFaces/PINCache.framework"
+  install_framework "Pods-PonyFaces/PINRemoteImage.framework"
+  install_framework "Pods-PonyFaces/SKTagView.framework"
+  install_framework "Pods-PonyFaces/SYFavoriteButton.framework"
+fi
