@@ -88,4 +88,10 @@ static NSString* const ShowSearchResultsSegue = @"ShowSearchResults";
 	return YES;
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField*)textField
+{
+	[self search:textField];
+	return YES;
+}
+
 @end
