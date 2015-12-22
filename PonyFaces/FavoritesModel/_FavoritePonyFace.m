@@ -4,15 +4,15 @@
 #import "_FavoritePonyFace.h"
 
 const struct FavoritePonyFaceAttributes FavoritePonyFaceAttributes = {
-	.imageURL = @"imageURL",
-	.link = @"link",
+	.imageURLStr = @"imageURLStr",
+	.linkStr = @"linkStr",
 	.ponyID = @"ponyID",
-	.thumbnailURL = @"thumbnailURL",
+	.thumbnailURLStr = @"thumbnailURLStr",
 };
 
 const struct FavoritePonyFaceRelationships FavoritePonyFaceRelationships = {
 	.category = @"category",
-	.tags = @"tags",
+	.tagObjects = @"tagObjects",
 };
 
 @implementation FavoritePonyFaceID
@@ -50,9 +50,9 @@ const struct FavoritePonyFaceRelationships FavoritePonyFaceRelationships = {
 	return keyPaths;
 }
 
-@dynamic imageURL;
+@dynamic imageURLStr;
 
-@dynamic link;
+@dynamic linkStr;
 
 @dynamic ponyID;
 
@@ -74,18 +74,18 @@ const struct FavoritePonyFaceRelationships FavoritePonyFaceRelationships = {
 	[self setPrimitivePonyID:@(value_)];
 }
 
-@dynamic thumbnailURL;
+@dynamic thumbnailURLStr;
 
 @dynamic category;
 
-@dynamic tags;
+@dynamic tagObjects;
 
-- (NSMutableSet*)tagsSet {
-	[self willAccessValueForKey:@"tags"];
+- (NSMutableSet*)tagObjectsSet {
+	[self willAccessValueForKey:@"tagObjects"];
 
-	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"tags"];
+	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"tagObjects"];
 
-	[self didAccessValueForKey:@"tags"];
+	[self didAccessValueForKey:@"tagObjects"];
 	return result;
 }
 

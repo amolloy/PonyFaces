@@ -4,15 +4,15 @@
 @import CoreData;
 
 extern const struct FavoritePonyFaceAttributes {
-	__unsafe_unretained NSString *imageURL;
-	__unsafe_unretained NSString *link;
+	__unsafe_unretained NSString *imageURLStr;
+	__unsafe_unretained NSString *linkStr;
 	__unsafe_unretained NSString *ponyID;
-	__unsafe_unretained NSString *thumbnailURL;
+	__unsafe_unretained NSString *thumbnailURLStr;
 } FavoritePonyFaceAttributes;
 
 extern const struct FavoritePonyFaceRelationships {
 	__unsafe_unretained NSString *category;
-	__unsafe_unretained NSString *tags;
+	__unsafe_unretained NSString *tagObjects;
 } FavoritePonyFaceRelationships;
 
 @class FavoritePonyFaceCategory;
@@ -27,13 +27,13 @@ extern const struct FavoritePonyFaceRelationships {
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
 @property (nonatomic, readonly, strong) FavoritePonyFaceID* objectID;
 
-@property (nonatomic, strong) NSString* imageURL;
+@property (nonatomic, strong) NSString* imageURLStr;
 
-//- (BOOL)validateImageURL:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateImageURLStr:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSString* link;
+@property (nonatomic, strong) NSString* linkStr;
 
-//- (BOOL)validateLink:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateLinkStr:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSNumber* ponyID;
 
@@ -43,35 +43,35 @@ extern const struct FavoritePonyFaceRelationships {
 
 //- (BOOL)validatePonyID:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSString* thumbnailURL;
+@property (nonatomic, strong) NSString* thumbnailURLStr;
 
-//- (BOOL)validateThumbnailURL:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateThumbnailURLStr:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) FavoritePonyFaceCategory *category;
 
 //- (BOOL)validateCategory:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSSet *tags;
+@property (nonatomic, strong) NSSet *tagObjects;
 
-- (NSMutableSet*)tagsSet;
+- (NSMutableSet*)tagObjectsSet;
 
 @end
 
-@interface _FavoritePonyFace (TagsCoreDataGeneratedAccessors)
-- (void)addTags:(NSSet*)value_;
-- (void)removeTags:(NSSet*)value_;
-- (void)addTagsObject:(FavoritePonyFaceTag*)value_;
-- (void)removeTagsObject:(FavoritePonyFaceTag*)value_;
+@interface _FavoritePonyFace (TagObjectsCoreDataGeneratedAccessors)
+- (void)addTagObjects:(NSSet*)value_;
+- (void)removeTagObjects:(NSSet*)value_;
+- (void)addTagObjectsObject:(FavoritePonyFaceTag*)value_;
+- (void)removeTagObjectsObject:(FavoritePonyFaceTag*)value_;
 
 @end
 
 @interface _FavoritePonyFace (CoreDataGeneratedPrimitiveAccessors)
 
-- (NSString*)primitiveImageURL;
-- (void)setPrimitiveImageURL:(NSString*)value;
+- (NSString*)primitiveImageURLStr;
+- (void)setPrimitiveImageURLStr:(NSString*)value;
 
-- (NSString*)primitiveLink;
-- (void)setPrimitiveLink:(NSString*)value;
+- (NSString*)primitiveLinkStr;
+- (void)setPrimitiveLinkStr:(NSString*)value;
 
 - (NSNumber*)primitivePonyID;
 - (void)setPrimitivePonyID:(NSNumber*)value;
@@ -79,13 +79,13 @@ extern const struct FavoritePonyFaceRelationships {
 - (int64_t)primitivePonyIDValue;
 - (void)setPrimitivePonyIDValue:(int64_t)value_;
 
-- (NSString*)primitiveThumbnailURL;
-- (void)setPrimitiveThumbnailURL:(NSString*)value;
+- (NSString*)primitiveThumbnailURLStr;
+- (void)setPrimitiveThumbnailURLStr:(NSString*)value;
 
 - (FavoritePonyFaceCategory*)primitiveCategory;
 - (void)setPrimitiveCategory:(FavoritePonyFaceCategory*)value;
 
-- (NSMutableSet*)primitiveTags;
-- (void)setPrimitiveTags:(NSMutableSet*)value;
+- (NSMutableSet*)primitiveTagObjects;
+- (void)setPrimitiveTagObjects:(NSMutableSet*)value;
 
 @end

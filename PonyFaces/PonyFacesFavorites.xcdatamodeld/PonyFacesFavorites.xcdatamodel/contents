@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Xcode 7.0">
     <entity name="FavoritePonyFace" representedClassName="FavoritePonyFace" syncable="YES">
-        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageURLStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="linkStr" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ponyID" attributeType="Integer 64" indexed="YES" syncable="YES"/>
-        <attribute name="thumbnailURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnailURLStr" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FavoritePonyFaceCategory" inverseName="ponyFaces" inverseEntity="FavoritePonyFaceCategory" syncable="YES"/>
-        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FavoritePonyFaceTag" inverseName="ponyFaces" inverseEntity="FavoritePonyFaceTag" syncable="YES"/>
+        <relationship name="tagObjects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FavoritePonyFaceTag" inverseName="ponyFaces" inverseEntity="FavoritePonyFaceTag" syncable="YES"/>
     </entity>
     <entity name="FavoritePonyFaceCategory" representedClassName="FavoritePonyFaceCategory" syncable="YES">
         <attribute name="categoryID" attributeType="Integer 64" syncable="YES"/>
@@ -15,7 +15,7 @@
     </entity>
     <entity name="FavoritePonyFaceTag" representedClassName="FavoritePonyFaceTag" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="ponyFaces" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FavoritePonyFace" inverseName="tags" inverseEntity="FavoritePonyFace" syncable="YES"/>
+        <relationship name="ponyFaces" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FavoritePonyFace" inverseName="tagObjects" inverseEntity="FavoritePonyFace" syncable="YES"/>
     </entity>
     <elements>
         <element name="FavoritePonyFace" positionX="-63" positionY="-18" width="128" height="135"/>
