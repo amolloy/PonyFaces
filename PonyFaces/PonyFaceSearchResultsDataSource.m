@@ -47,7 +47,7 @@
 - (id<PonyFaceModel>)ponyFaceForCategoryIndex:(NSInteger)index row:(NSInteger)row
 {
 	NSArray<PonyFace*>* ponyFaces = [self.searchResults[(NSUInteger)index].faces sortedArrayUsingComparator:^NSComparisonResult(PonyFace* p1, PonyFace* p2) {
-		return [@(p1.ponyID) compare:@(p2.ponyID)];
+		return [p1.ponyID compare:p2.ponyID];
 	}];
 
 	return ponyFaces[(NSUInteger)row];

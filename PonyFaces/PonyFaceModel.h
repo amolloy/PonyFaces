@@ -10,6 +10,7 @@
 
 @protocol PonyFaceModel <NSObject>
 
+- (NSNumber*)ponyID;
 - (NSString*)categoryName;
 - (NSURL*)thumbnailURL;
 - (NSURL*)imageURL;

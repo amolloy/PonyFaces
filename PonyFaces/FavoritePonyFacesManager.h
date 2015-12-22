@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PonyFaceModel.h"
 
 @class PonyFace;
 
@@ -18,6 +19,6 @@
 - (void)cleanUp;
 
 - (void)addFavoritePonyFace:(PonyFace*)ponyFace;
-- (BOOL)isPonyFaceAFavorite:(PonyFace*)ponyFace;
+- (BOOL)isPonyFaceAFavorite:(id<PonyFaceModel>)ponyFace;
 
 @end

@@ -30,7 +30,7 @@
 {
 	[MagicalRecord saveWithBlock:^(NSManagedObjectContext* localContext) {
 		FavoritePonyFace* favoritePonyFace = [FavoritePonyFace MR_createEntityInContext:localContext];
-		favoritePonyFace.ponyID = @(ponyFace.ponyID);
+		favoritePonyFace.ponyID = ponyFace.ponyID;
 		favoritePonyFace.category = [self findOrCreateCategoryForPonyFace:ponyFace
 																inContext:localContext];
 		favoritePonyFace.thumbnailURLStr = [ponyFace.thumbnailURL absoluteString];
@@ -64,9 +64,9 @@
 	return category;
 }
 
-- (BOOL)isPonyFaceAFavorite:(PonyFace*)ponyFace
+- (BOOL)isPonyFaceAFavorite:(id<PonyFaceModel>)ponyFace
 {
-	return [FavoritePonyFace MR_countOfEntitiesWithPredicate:[NSPredicate predicateWithFormat:@"ponyID=%d", ponyFace.ponyID]] != 0;
+	return [FavoritePonyFace MR_countOfEntitiesWithPredicate:[NSPredicate predicateWithFormat:@"ponyID=%@", ponyFace.ponyID]] != 0;
 }
 
 #pragma mark - Singleton

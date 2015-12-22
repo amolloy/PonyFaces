@@ -10,7 +10,7 @@
 #import "PonyFaceCategory.h"
 
 @interface PonyFace ()
-@property (nonatomic, assign, readwrite) NSInteger ponyID;
+@property (nonatomic, assign, readwrite) NSNumber* ponyID;
 @property (nonatomic, weak, readwrite) PonyFaceCategory* category;
 @property (nonatomic, copy, readwrite) NSArray* tags;
 @property (nonatomic, strong, readwrite) NSURL* thumbnailURL;
@@ -32,7 +32,7 @@
 	self = [super init];
 	if (self)
 	{
-		self.ponyID = ponyID;
+		self.ponyID = @(ponyID);
 		self.category = category;
 		self.tags = tags;
 		self.thumbnailURL = thumbnailURL;
