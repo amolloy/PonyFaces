@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-PonyFaces/FLAnimatedImage.framework"
+  install_framework "Pods-PonyFaces/FXReachability.framework"
   install_framework "Pods-PonyFaces/MagicalRecord.framework"
   install_framework "Pods-PonyFaces/Masonry.framework"
   install_framework "Pods-PonyFaces/PINCache.framework"
@@ -94,6 +95,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-PonyFaces/FLAnimatedImage.framework"
+  install_framework "Pods-PonyFaces/FXReachability.framework"
   install_framework "Pods-PonyFaces/MagicalRecord.framework"
   install_framework "Pods-PonyFaces/Masonry.framework"
   install_framework "Pods-PonyFaces/PINCache.framework"

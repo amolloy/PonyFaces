@@ -9,4 +9,5 @@ target :PonyFaces do
 	pod 'SKTagView'
 	pod 'MagicalRecord'
 	pod 'SYFavoriteButton'
+	pod 'FXReachability'
 end
