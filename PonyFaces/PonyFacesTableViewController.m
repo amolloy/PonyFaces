@@ -9,11 +9,39 @@
 #import "PonyFacesTableViewController.h"
 #import "PonyFaceTableViewCell.h"
 #import "PonyFace.h"
+#import "PonyFaceModel.h"
+#import <FXReachability/FXReachability.h>
+#import <PINRemoteImage/PINRemoteImageManager.h>
 
 @interface PonyFacesTableViewController ()
 @end
 
 @implementation PonyFacesTableViewController
+
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+
+	if ([FXReachability sharedInstance].status == FXReachabilityStatusReachableViaWiFi)
+	{
+		NSMutableArray<NSURL*>* prefetchURLS = [NSMutableArray array];
+
+		NSInteger numCategories = [self.ponyFacesDataSource numberOfCategories];
+		for (NSInteger categoryIndex = 0; categoryIndex < numCategories; ++categoryIndex)
+		{
+			NSInteger numRows = [self.ponyFacesDataSource numberOfPonyFacesInCategoryAtIndex:categoryIndex];
+
+			for (NSInteger rowIndex = 0; rowIndex < numRows; ++rowIndex)
+			{
+				id<PonyFaceModel> ponyFace = [self.ponyFacesDataSource ponyFaceForCategoryIndex:categoryIndex
+																							row:rowIndex];
+				[prefetchURLS addObject:ponyFace.thumbnailURL];
+			}
+		}
+
+		[[PINRemoteImageManager sharedImageManager] prefetchImagesWithURLs:prefetchURLS];
+	}
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
