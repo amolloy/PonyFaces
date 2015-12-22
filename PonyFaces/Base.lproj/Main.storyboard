@@ -173,10 +173,11 @@
                             <outlet property="delegate" destination="Xr7-Ww-dKB" id="uNf-An-kPT"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="BKV-8S-lyX"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Kr-RE-BMN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2478" y="-794"/>
+            <point key="canvasLocation" x="2718" y="0.0"/>
         </scene>
         <!--Pony Face Detail View Controller-->
         <scene sceneID="sfR-F8-un7">
@@ -223,7 +224,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVx-dN-MoZ">
                                         <rect key="frame" x="0.0" y="4" width="64" height="32.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -276,7 +277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgo-V7-IHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3194" y="-794"/>
+            <point key="canvasLocation" x="3434" y="0.0"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -297,46 +298,17 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="6sh-rg-5wd">
-            <objects>
-                <tableViewController id="TA0-xe-d76" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bO2-cO-h2F">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="poi-Dw-e9t">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="poi-Dw-e9t" id="TE0-Le-Lk6">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="TA0-xe-d76" id="EhF-tg-Qnm"/>
-                            <outlet property="delegate" destination="TA0-xe-d76" id="bZ9-P8-PgO"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="EtW-nX-fqa"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uE9-81-OEu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1741" y="289"/>
-        </scene>
         <!--Favorites-->
         <scene sceneID="ejV-8B-RYy">
             <objects>
-                <navigationController id="awm-5n-D7q" sceneMemberID="viewController">
+                <navigationController id="awm-5n-D7q" customClass="PonyFaceFavoritesViewController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favorites" image="748-heart.png" id="Z2G-sj-y72"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hi8-IR-fd0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="TA0-xe-d76" kind="relationship" relationship="rootViewController" id="F2K-dj-uz6"/>
+                        <segue destination="Xr7-Ww-dKB" kind="relationship" relationship="rootViewController" id="3mL-1w-zdP"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KjP-LE-Ebh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -347,4 +319,7 @@
     <resources>
         <image name="748-heart.png" width="28" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3mL-1w-zdP"/>
+    </inferredMetricsTieBreakers>
 </document>

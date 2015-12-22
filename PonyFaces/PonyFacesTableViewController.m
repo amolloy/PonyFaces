@@ -53,5 +53,13 @@
 	}
 }
 
+#pragma mark - PonyFaceFavoritesDataSourceDelegate
+
+- (void)ponyFaceAtIndexPath:(NSIndexPath *)indexPath wasUpdatedTo:(id<PonyFaceModel>)ponyFace
+{
+	PonyFaceTableViewCell* cell = [self.tableView cellForRowAtIndexPath:indexPath];
+	cell.ponyFace = ponyFace;
+}
+
 @end
 
