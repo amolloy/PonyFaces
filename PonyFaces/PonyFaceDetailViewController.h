@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@class PonyFace;
+#import "PonyFaceModel.h"
 
 @interface PonyFaceDetailViewController : UIViewController
-@property (nonatomic, strong) PonyFace* ponyFace;
+@property (nonatomic, strong) id<PonyFaceModel> ponyFace;
 @end

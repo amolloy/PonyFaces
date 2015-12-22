@@ -53,7 +53,7 @@ static void* const sPonyFaceObvserverContext = (void*)&sPonyFaceObvserverContext
 	{
 		if (self.ponyFace)
 		{
-			self.categoryLabel.text = self.ponyFace.category.name;
+			self.categoryLabel.text = self.ponyFace.categoryName;
 			[self.activityIndicatorView startAnimating];
 			[self.imageView pin_setImageFromURL:self.ponyFace.imageURL completion:^(PINRemoteImageManagerResult *result) {
 				[self.activityIndicatorView stopAnimating];

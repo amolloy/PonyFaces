@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PonyFaceModel.h"
 
 @protocol PonyFacesTableViewControllerDataSource;
 
@@ -20,5 +21,5 @@
 - (NSInteger)numberOfPonyFacesInCategoryAtIndex:(NSInteger)index;
 
 - (NSString*)titleForCategoryAtIndex:(NSInteger)index;
-- (PonyFace*)ponyFaceForCategoryIndex:(NSInteger)index row:(NSInteger)row;
+- (id<PonyFaceModel>)ponyFaceForCategoryIndex:(NSInteger)index row:(NSInteger)row;
 @end

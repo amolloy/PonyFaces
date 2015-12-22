@@ -33,16 +33,16 @@
 		favoritePonyFace.ponyID = @(ponyFace.ponyID);
 		favoritePonyFace.category = [self findOrCreateCategoryForPonyFace:ponyFace
 																inContext:localContext];
-		favoritePonyFace.thumbnailURL = [ponyFace.thumbnailURL absoluteString];
-		favoritePonyFace.imageURL = [ponyFace.imageURL absoluteString];
-		favoritePonyFace.link = [ponyFace.link absoluteString];
+		favoritePonyFace.thumbnailURLStr = [ponyFace.thumbnailURL absoluteString];
+		favoritePonyFace.imageURLStr = [ponyFace.imageURL absoluteString];
+		favoritePonyFace.linkStr = [ponyFace.link absoluteString];
 
 		for (NSString* tag in ponyFace.tags)
 		{
 			FavoritePonyFaceTag* favoriteTag = [FavoritePonyFaceTag MR_findFirstOrCreateByAttribute:@"name"
 																						  withValue:tag
 																						  inContext:localContext];
-			[favoritePonyFace addTagsObject:favoriteTag];
+			[favoritePonyFace addTagObjectsObject:favoriteTag];
 		}
 	}];
 }

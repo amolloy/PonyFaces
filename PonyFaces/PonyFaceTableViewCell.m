@@ -7,8 +7,6 @@
 //
 
 #import "PonyFaceTableViewCell.h"
-#import "PonyFace.h"
-#import "PonyFaceCategory.h"
 #import "UIImageView+PINRemoteImage.h"
 #import "PonyFacesTagsView.h"
 
@@ -27,11 +25,11 @@
 	[self.activityIndicatorView startAnimating];
 }
 
-- (void)setPonyFace:(PonyFace*)ponyFace
+- (void)setPonyFace:(id<PonyFaceModel>)ponyFace
 {
 	_ponyFace = ponyFace;
 
-	self.categoryLabel.text = ponyFace.category.name;
+	self.categoryLabel.text = ponyFace.categoryName;
 	[self.thumbnailView pin_setImageFromURL:ponyFace.thumbnailURL completion:^(PINRemoteImageManagerResult *result) {
 		[self.activityIndicatorView stopAnimating];
 	}];

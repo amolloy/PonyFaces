@@ -7,8 +7,9 @@
 //
 
 #import "PonyFaceSearchResultsDataSource.h"
-#import "PonyFaceCategory.h"
+#import "PonyFaceModel.h"
 #import "PonyFace.h"
+#import "PonyFaceCategory.h"
 
 @interface PonyFaceSearchResultsDataSource ()
 @property (copy, nonatomic) NSArray<PonyFaceCategory*>* searchResults;
@@ -43,9 +44,9 @@
 	return self.searchResults[(NSUInteger)index].name;
 }
 
-- (PonyFace*)ponyFaceForCategoryIndex:(NSInteger)index row:(NSInteger)row
+- (id<PonyFaceModel>)ponyFaceForCategoryIndex:(NSInteger)index row:(NSInteger)row
 {
-	NSArray* ponyFaces = [self.searchResults[(NSUInteger)index].faces sortedArrayUsingComparator:^NSComparisonResult(PonyFace* p1, PonyFace* p2) {
+	NSArray<PonyFace*>* ponyFaces = [self.searchResults[(NSUInteger)index].faces sortedArrayUsingComparator:^NSComparisonResult(PonyFace* p1, PonyFace* p2) {
 		return [@(p1.ponyID) compare:@(p2.ponyID)];
 	}];
 
