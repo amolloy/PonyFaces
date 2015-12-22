@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PonyFaceModel.h"
 
 @class PonyFaceCategory;
 
-@interface PonyFace : NSObject
+@interface PonyFace : NSObject <PonyFaceModel>
 @property (nonatomic, assign, readonly) NSInteger ponyID;
 @property (nonatomic, weak, readonly) PonyFaceCategory* category;
 @property (nonatomic, copy, readonly) NSArray<NSString*>* tags;

@@ -7,6 +7,7 @@
 //
 
 #import "PonyFace.h"
+#import "PonyFaceCategory.h"
 
 @interface PonyFace ()
 @property (nonatomic, assign, readwrite) NSInteger ponyID;
@@ -57,6 +58,11 @@
 						   imageURL:imageURL
 							   link:link
 							enabled:enabled];
+}
+
+- (NSString*)categoryName
+{
+	return self.category.name;
 }
 
 @end
