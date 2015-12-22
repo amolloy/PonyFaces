@@ -10,11 +10,9 @@
 #import "FavoritePonyFacesManager.h"
 
 @interface AppDelegate ()
-
 @end
 
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -26,6 +24,22 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
 	[[FavoritePonyFacesManager sharedManager] cleanUp];
+}
+
+- (void)setNetworkActivityIndicatorVisible:(BOOL)visible
+{
+	static NSInteger sNetworkActivityIndicatorVisibleCount = 0;
+
+	if (visible)
+	{
+		sNetworkActivityIndicatorVisibleCount+= 1;
+	}
+	else
+	{
+		sNetworkActivityIndicatorVisibleCount = MAX(0, sNetworkActivityIndicatorVisibleCount - 1);
+	}
+
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:sNetworkActivityIndicatorVisibleCount != 0];
 }
 
 @end

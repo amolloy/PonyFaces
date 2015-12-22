@@ -6,6 +6,7 @@
 //  Copyright © 2015 Andy Molloy. All rights reserved.
 //
 
+#import "AppDelegate.h"
 #import "PonyFaceDetailViewController.h"
 #import "PonyFace.h"
 #import "PonyFaceCategory.h"
@@ -81,7 +82,9 @@ static void* const sPonyFaceObvserverContext = (void*)&sPonyFaceObvserverContext
 		{
 			self.categoryLabel.text = self.ponyFace.categoryName;
 			[self.activityIndicatorView startAnimating];
+			[(AppDelegate*)[UIApplication sharedApplication].delegate setNetworkActivityIndicatorVisible:YES];
 			[self.imageView pin_setImageFromURL:self.ponyFace.imageURL completion:^(PINRemoteImageManagerResult *result) {
+				[(AppDelegate*)[UIApplication sharedApplication].delegate setNetworkActivityIndicatorVisible:NO];
 				[self.activityIndicatorView stopAnimating];
 			}];
 			[self.tagsView setTagStrings:self.ponyFace.tags];

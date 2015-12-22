@@ -6,6 +6,7 @@
 //  Copyright © 2015 Andy Molloy. All rights reserved.
 //
 
+#import "AppDelegate.h"
 #import "PonyFaceTableViewCell.h"
 #import "UIImageView+PINRemoteImage.h"
 #import "PonyFacesTagsView.h"
@@ -30,7 +31,9 @@
 	_ponyFace = ponyFace;
 
 	self.categoryLabel.text = ponyFace.categoryName;
+	[(AppDelegate*)[UIApplication sharedApplication].delegate setNetworkActivityIndicatorVisible:YES];
 	[self.thumbnailView pin_setImageFromURL:ponyFace.thumbnailURL completion:^(PINRemoteImageManagerResult *result) {
+		[(AppDelegate*)[UIApplication sharedApplication].delegate setNetworkActivityIndicatorVisible:NO];
 		[self.activityIndicatorView stopAnimating];
 	}];
 	[self.tagsView setTagStrings:ponyFace.tags];

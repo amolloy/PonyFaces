@@ -9,6 +9,7 @@
 #import "PonyFacesAPI.h"
 #import "PonyFaceCategory.h"
 #import "PonyFace.h"
+#import "AppDelegate.h"
 
 @implementation PonyFacesAPI
 
@@ -30,7 +31,9 @@
 	[request setValue:@"text/json" forHTTPHeaderField:@"Accept"];
 	[request setValue:@"text/json" forHTTPHeaderField:@"Content-Type"];
 
+	[(AppDelegate*)[UIApplication sharedApplication].delegate setNetworkActivityIndicatorVisible:YES];
 	[[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData* data, NSURLResponse* response, NSError* error) {
+		[(AppDelegate*)[UIApplication sharedApplication].delegate setNetworkActivityIndicatorVisible:NO];
 		NSArray* results = nil;
 		if (!error)
 		{
