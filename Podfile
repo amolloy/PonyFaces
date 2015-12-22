@@ -6,4 +6,5 @@ target :PonyFaces do
 	pod 'PINRemoteImage'
 	pod 'SKTagView'
 	pod 'MagicalRecord'
+	pod 'SYFavoriteButton'
 end

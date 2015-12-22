@@ -12,11 +12,13 @@ PODS:
     - PINRemoteImage/Core
   - SKTagView (0.7):
     - Masonry
+  - SYFavoriteButton (1.0)
 
 DEPENDENCIES:
   - MagicalRecord
   - PINRemoteImage
   - SKTagView
+  - SYFavoriteButton
 
 SPEC CHECKSUMS:
   FLAnimatedImage: e16a1e1cef08e4c509b47e4acbe3923f65c16135
@@ -25,5 +27,6 @@ SPEC CHECKSUMS:
   PINCache: 9e70271f1bdd60c0465b7208adcc4b6acc1fc376
   PINRemoteImage: 9f6f484bbceee15e2df5aee0beeac2e261e4ac81
   SKTagView: 1e89c1ce2292cf890610901d3621c55d1ed82379
+  SYFavoriteButton: abb3a4bd3607f848f047e015c64e780f8c5283db
 
 COCOAPODS: 0.39.0
