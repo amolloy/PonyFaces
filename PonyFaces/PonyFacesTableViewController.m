@@ -113,7 +113,7 @@
 {
 	if ([segue.destinationViewController respondsToSelector:@selector(setPonyFace:)])
 	{
-		PonyFaceTableViewCell* cell = [self.tableView cellForRowAtIndexPath:self.tableView.indexPathForSelectedRow];
+		PonyFaceTableViewCell* cell = sender;
 		[segue.destinationViewController setPonyFace:cell.ponyFace];
 	}
 }
