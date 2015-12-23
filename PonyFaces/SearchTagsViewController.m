@@ -17,7 +17,9 @@ static NSString* const ShowSearchResultsSegue = @"ShowSearchResults";
 @property (weak, nonatomic) IBOutlet UITextField* searchTextField;
 @property (weak, nonatomic) IBOutlet UIButton* searchButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView* activityIndicator;
+@property (weak, nonatomic) IBOutlet UIView* noResultsView;
 @property (strong, nonatomic) PonyFaceSearchResultsDataSource* searchResults;
+@property (assign, nonatomic) BOOL noResultsViewIsVisible;
 @end
 
 @implementation SearchTagsViewController
@@ -43,32 +45,52 @@ static NSString* const ShowSearchResultsSegue = @"ShowSearchResults";
 	__weak typeof(self) wself = self;
 	[PonyFacesAPI performSearchForTag:query
 						   completion:^(NSArray* results, NSError* error) {
-							   __strong typeof(self) sself = wself;
-							   sself.searchResults = [[PonyFaceSearchResultsDataSource alloc] initWithSearchResults:results];
 							   dispatch_async(dispatch_get_main_queue(), ^{
-								   [self.activityIndicator stopAnimating];
-								   
-								   if (error)
-								   {
-									   UIAlertController* controller = [UIAlertController alertControllerWithTitle:@"Error"
-																										   message:error.localizedDescription
-																									preferredStyle:UIAlertControllerStyleAlert];
-									   [controller addAction:[UIAlertAction actionWithTitle:@"Ok"
-																					  style:UIAlertActionStyleDefault
-																					handler:nil]];
-									   [sself presentViewController:controller
-														   animated:YES
-														 completion:nil];
-
-									   sself.searchTextField.enabled = YES;
-								   }
-								   else
-								   {
-									   [self performSegueWithIdentifier:ShowSearchResultsSegue
-																 sender:self];
-								   }
+								   __strong typeof(self) sself = wself;
+								   [sself searchCompletedWithResults:results
+															   error:error];
 							   });
 						   }];
+}
+
+- (void)searchCompletedWithResults:(NSArray*)results error:(NSError*)error
+{
+	[self.activityIndicator stopAnimating];
+
+	if (error)
+	{
+		UIAlertController* controller = [UIAlertController alertControllerWithTitle:@"Error"
+																			message:error.localizedDescription
+																	 preferredStyle:UIAlertControllerStyleAlert];
+		[controller addAction:[UIAlertAction actionWithTitle:@"Ok"
+													   style:UIAlertActionStyleDefault
+													 handler:nil]];
+		[self presentViewController:controller
+						   animated:YES
+						 completion:nil];
+
+		self.searchTextField.enabled = YES;
+	}
+	else
+	{
+		if (results.count != 0)
+		{
+			self.searchResults = [[PonyFaceSearchResultsDataSource alloc] initWithSearchResults:results];
+			[self performSegueWithIdentifier:ShowSearchResultsSegue
+									  sender:self];
+		}
+		else
+		{
+			self.searchTextField.enabled = YES;
+			self.noResultsViewIsVisible = YES;
+			self.noResultsView.alpha = 0;
+			self.noResultsView.hidden = NO;
+			[UIView animateWithDuration:0.5
+							 animations:^{
+								 self.noResultsView.alpha = 1;
+							 }];
+		}
+	}
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
@@ -85,6 +107,16 @@ static NSString* const ShowSearchResultsSegue = @"ShowSearchResults";
 {
 	NSString* newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
 	self.searchButton.enabled = newString.length != 0;
+	if (self.noResultsViewIsVisible)
+	{
+		self.noResultsViewIsVisible = NO;
+		[UIView animateWithDuration:0.5
+						 animations:^{
+							 self.noResultsView.alpha = 0;
+						 } completion:^(BOOL finished) {
+							 self.noResultsView.hidden = YES;
+						 }];
+	}
 	return YES;
 }
 
