@@ -38,7 +38,7 @@ static NSString* const ShowSearchResultsSegue = @"ShowSearchResults";
 	self.searchButton.enabled = NO;
 	[self.activityIndicator startAnimating];
 
-	NSString* query = self.searchTextField.text;
+	NSString* query = [self.searchTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 
 	__weak typeof(self) wself = self;
 	[PonyFacesAPI performSearchForTag:query
