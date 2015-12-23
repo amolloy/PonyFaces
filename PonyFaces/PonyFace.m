@@ -10,7 +10,7 @@
 #import "PonyFaceCategory.h"
 
 @interface PonyFace ()
-@property (nonatomic, assign, readwrite) NSNumber* ponyID;
+@property (nonatomic, strong, readwrite) NSNumber* ponyID;
 @property (nonatomic, weak, readwrite) PonyFaceCategory* category;
 @property (nonatomic, copy, readwrite) NSArray* tags;
 @property (nonatomic, strong, readwrite) NSURL* thumbnailURL;

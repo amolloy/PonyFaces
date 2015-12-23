@@ -12,7 +12,7 @@
 @class PonyFaceCategory;
 
 @interface PonyFace : NSObject <PonyFaceModel>
-@property (nonatomic, assign, readonly) NSNumber* ponyID;
+@property (nonatomic, strong, readonly) NSNumber* ponyID;
 @property (nonatomic, weak, readonly) PonyFaceCategory* category;
 @property (nonatomic, copy, readonly) NSArray<NSString*>* tags;
 @property (nonatomic, strong, readonly) NSURL* thumbnailURL;
