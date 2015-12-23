@@ -42,14 +42,14 @@
                                     <constraint firstAttribute="width" secondItem="rAR-5J-Lzq" secondAttribute="height" multiplier="1:1" id="mrq-Ti-UVk"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGa-eG-9EC">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGa-eG-9EC" userLabel="Bottom Spacer View">
                                 <rect key="frame" x="295" y="277" width="10" height="0.0"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="10" id="djn-HU-7xj"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYq-E0-P4S">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYq-E0-P4S" userLabel="Top Spacer View">
                                 <rect key="frame" x="295" y="72" width="10" height="0.0"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -117,6 +117,7 @@
                             <constraint firstItem="dT8-Rc-zP6" firstAttribute="centerY" secondItem="wj3-KB-mQN" secondAttribute="centerY" id="c49-1x-xjF"/>
                             <constraint firstItem="dT8-Rc-zP6" firstAttribute="centerY" secondItem="VCh-GT-dGe" secondAttribute="centerY" id="clM-90-sZC"/>
                             <constraint firstItem="UYq-E0-P4S" firstAttribute="centerX" secondItem="u5v-yg-p3m" secondAttribute="centerX" id="djN-9w-DGm"/>
+                            <constraint firstItem="wj3-KB-mQN" firstAttribute="top" secondItem="HkH-QW-VbD" secondAttribute="bottom" constant="8" symbolic="YES" id="kwE-qx-fbk"/>
                             <constraint firstItem="rAR-5J-Lzq" firstAttribute="top" secondItem="UYq-E0-P4S" secondAttribute="bottom" id="npZ-4V-3sF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dT8-Rc-zP6" secondAttribute="trailing" id="oK8-Do-fLO"/>
                             <constraint firstItem="dT8-Rc-zP6" firstAttribute="leading" secondItem="VCh-GT-dGe" secondAttribute="trailing" constant="8" id="v5Z-TU-Seg"/>
@@ -124,9 +125,21 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="kwE-qx-fbk"/>
                                 <exclude reference="clM-90-sZC"/>
                                 <exclude reference="oK8-Do-fLO"/>
                                 <exclude reference="v5Z-TU-Seg"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="rAR-5J-Lzq"/>
+                                <exclude reference="sGa-eG-9EC"/>
+                                <exclude reference="UYq-E0-P4S"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="9Zh-Yi-isT"/>
+                                <include reference="kwE-qx-fbk"/>
                             </mask>
                         </variation>
                     </view>
