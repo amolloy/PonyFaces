@@ -12,7 +12,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+- (UIFontDescriptor*)ponyFacesFontDescriptor;
+- (UIColor*)ponyFacesMainColor;
 - (void)setNetworkActivityIndicatorVisible:(BOOL)visible;
-
 @end
 
