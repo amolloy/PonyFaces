@@ -52,7 +52,6 @@
 		B4DC40411C29F1E50097925A /* SolidHeart.png in Resources */ = {isa = PBXBuildFile; fileRef = B4DC403E1C29F1E50097925A /* SolidHeart.png */; };
 		B4DC40421C29F1E50097925A /* SolidHeart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4DC403F1C29F1E50097925A /* SolidHeart@2x.png */; };
 		B4DC40431C29F1E50097925A /* SolidHeart@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4DC40401C29F1E50097925A /* SolidHeart@3x.png */; };
-		B4DC40451C2AE25D0097925A /* PonyFace.png in Resources */ = {isa = PBXBuildFile; fileRef = B4DC40441C2AE25D0097925A /* PonyFace.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,7 +110,6 @@
 		B4DC403E1C29F1E50097925A /* SolidHeart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SolidHeart.png; sourceTree = "<group>"; };
 		B4DC403F1C29F1E50097925A /* SolidHeart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SolidHeart@2x.png"; sourceTree = "<group>"; };
 		B4DC40401C29F1E50097925A /* SolidHeart@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SolidHeart@3x.png"; sourceTree = "<group>"; };
-		B4DC40441C2AE25D0097925A /* PonyFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PonyFace.png; sourceTree = "<group>"; };
 		B91F9791F3CCE4097F3767CA /* Pods_PonyFaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PonyFaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -205,7 +203,6 @@
 		B424ACB71C28769A001C05A1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B4DC40441C2AE25D0097925A /* PonyFace.png */,
 				B4DC403E1C29F1E50097925A /* SolidHeart.png */,
 				B4DC403F1C29F1E50097925A /* SolidHeart@2x.png */,
 				B4DC40401C29F1E50097925A /* SolidHeart@3x.png */,
@@ -311,7 +308,6 @@
 				B4DC40431C29F1E50097925A /* SolidHeart@3x.png in Resources */,
 				B424ACC51C28769A001C05A1 /* Main.storyboard in Resources */,
 				B4DC40411C29F1E50097925A /* SolidHeart.png in Resources */,
-				B4DC40451C2AE25D0097925A /* PonyFace.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

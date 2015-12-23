@@ -36,7 +36,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="PonyFace.png" translatesAutoresizingMaskIntoConstraints="NO" id="rAR-5J-Lzq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="HappyFace" translatesAutoresizingMaskIntoConstraints="NO" id="rAR-5J-Lzq">
                                 <rect key="frame" x="198" y="72" width="205" height="205"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rAR-5J-Lzq" secondAttribute="height" multiplier="1:1" id="mrq-Ti-UVk"/>
@@ -396,7 +396,7 @@
     </scenes>
     <resources>
         <image name="748-heart.png" width="28" height="25"/>
-        <image name="PonyFace.png" width="450" height="450"/>
+        <image name="HappyFace" width="250" height="250"/>
         <image name="SadFace" width="36" height="36"/>
         <image name="SolidHeart.png" width="28" height="25"/>
     </resources>
