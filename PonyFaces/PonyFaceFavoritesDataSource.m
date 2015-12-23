@@ -55,6 +55,11 @@
 	return [self.fetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:row inSection:index]];
 }
 
+- (NSString*)navigationItemTitle
+{
+	return NSLocalizedString(@"Favorites", @"Title for the favorites list");
+}
+
 #pragma mark Fetched Results Controller Delegate
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController*)controller

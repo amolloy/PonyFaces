@@ -53,4 +53,9 @@
 	return ponyFaces[(NSUInteger)row];
 }
 
+- (NSString*)navigationItemTitle
+{
+	return NSLocalizedString(@"Search Results", @"Title for the search results screen.");
+}
+
 @end

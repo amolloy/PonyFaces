@@ -41,6 +41,8 @@
 
 		[[PINRemoteImageManager sharedImageManager] prefetchImagesWithURLs:prefetchURLS];
 	}
+
+	self.navigationItem.title = [self.ponyFacesDataSource navigationItemTitle];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

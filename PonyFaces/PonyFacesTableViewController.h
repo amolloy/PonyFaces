@@ -22,4 +22,6 @@
 
 - (NSString*)titleForCategoryAtIndex:(NSInteger)index;
 - (id<PonyFaceModel>)ponyFaceForCategoryIndex:(NSInteger)index row:(NSInteger)row;
+
+- (NSString*)navigationItemTitle;
 @end

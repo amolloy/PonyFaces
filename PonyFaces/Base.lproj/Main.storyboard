@@ -116,7 +116,9 @@
                             <constraint firstItem="4FR-OI-T3T" firstAttribute="centerY" secondItem="u5v-yg-p3m" secondAttribute="centerY" id="pQP-gG-J3d"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Pony Faces" id="1OQ-gZ-fu1"/>
+                    <navigationItem key="navigationItem" title="Pony Faces" id="1OQ-gZ-fu1">
+                        <barButtonItem key="backBarButtonItem" title="Search" id="tYt-ol-3yY"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="dT8-Rc-zP6" id="5do-W2-eY2"/>
                         <outlet property="searchButton" destination="VCh-GT-dGe" id="yQx-Aw-xhG"/>
