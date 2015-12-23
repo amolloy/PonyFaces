@@ -12,8 +12,10 @@
 #import "PonyFaceModel.h"
 #import <FXReachability/FXReachability.h>
 #import <PINRemoteImage/PINRemoteImageManager.h>
+#import "AppDelegate.h"
 
 @interface PonyFacesTableViewController ()
+@property (nonatomic, copy) NSArray* thumbnailPrecacheTaskIDs;
 @end
 
 @implementation PonyFacesTableViewController
@@ -24,8 +26,9 @@
 
 	if ([FXReachability sharedInstance].status == FXReachabilityStatusReachableViaWiFi)
 	{
-		NSMutableArray<NSURL*>* prefetchURLS = [NSMutableArray array];
+		NSMutableArray* taskIDs = [NSMutableArray array];
 
+		AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
 		NSInteger numCategories = [self.ponyFacesDataSource numberOfCategories];
 		for (NSInteger categoryIndex = 0; categoryIndex < numCategories; ++categoryIndex)
 		{
@@ -35,14 +38,46 @@
 			{
 				id<PonyFaceModel> ponyFace = [self.ponyFacesDataSource ponyFaceForCategoryIndex:categoryIndex
 																							row:rowIndex];
-				[prefetchURLS addObject:ponyFace.thumbnailURL];
+
+				__weak typeof(self) wself = self;
+				NSUUID* taskID = [[PINRemoteImageManager sharedImageManager] downloadImageWithURL:ponyFace.thumbnailURL
+																					   completion:^(PINRemoteImageManagerResult *result)
+								  {
+									  dispatch_async(dispatch_get_main_queue(), ^{
+										  __strong typeof(self) sself = wself;
+
+										  [appDelegate setNetworkActivityIndicatorVisible:NO];
+
+										  NSMutableArray* newTaskIDs = sself.thumbnailPrecacheTaskIDs.mutableCopy;
+										  [newTaskIDs removeObject:result.UUID];
+										  sself.thumbnailPrecacheTaskIDs = newTaskIDs;
+									  });
+								  }];
+				if (taskID)
+				{
+					[appDelegate setNetworkActivityIndicatorVisible:YES];
+					[taskIDs addObject:taskID];
+				}
 			}
 		}
 
-		[[PINRemoteImageManager sharedImageManager] prefetchImagesWithURLs:prefetchURLS];
+		self.thumbnailPrecacheTaskIDs = taskIDs;
 	}
 
 	self.navigationItem.title = [self.ponyFacesDataSource navigationItemTitle];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+
+	AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+	for (NSUUID* taskID in self.thumbnailPrecacheTaskIDs)
+	{
+		[appDelegate setNetworkActivityIndicatorVisible:NO];
+		[[PINRemoteImageManager sharedImageManager] cancelTaskWithUUID:taskID];
+	}
+	self.thumbnailPrecacheTaskIDs = nil;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
