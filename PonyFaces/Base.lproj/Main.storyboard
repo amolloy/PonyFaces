@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -224,7 +225,10 @@
                                     <outlet property="categoryLabel" destination="Pr3-2x-6Lw" id="SNO-OT-rfo"/>
                                     <outlet property="tagsView" destination="fHK-zu-hFZ" id="1Jj-p2-nrs"/>
                                     <outlet property="thumbnailView" destination="Kx0-pA-Rmu" id="Q97-AJ-f56"/>
-                                    <segue destination="HT0-7o-0PG" kind="show" id="wKV-Jq-laQ"/>
+                                    <segue destination="HT0-7o-0PG" kind="show" id="wKV-Jq-laQ">
+                                        <segue key="commit" inheritsFrom="parent" id="c5A-dr-Jxx"/>
+                                        <segue key="preview" inheritsFrom="commit" id="dpJ-Zi-DwG"/>
+                                    </segue>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -409,5 +413,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3mL-1w-zdP"/>
+        <segue reference="wKV-Jq-laQ"/>
     </inferredMetricsTieBreakers>
 </document>
