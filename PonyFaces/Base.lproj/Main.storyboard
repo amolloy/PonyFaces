@@ -281,7 +281,7 @@
                                         </constraints>
                                         <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="SolidHeart.png"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="SolidHeart"/>
                                             <userDefinedRuntimeAttribute type="color" keyPath="favoredColor">
                                                 <color key="value" red="0.99228733777999878" green="0.0" blue="0.89954441785812378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
@@ -380,7 +380,7 @@
         <scene sceneID="ejV-8B-RYy">
             <objects>
                 <navigationController id="awm-5n-D7q" customClass="PonyFaceFavoritesViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" image="748-heart.png" id="Z2G-sj-y72"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="HollowHeart" id="Z2G-sj-y72"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hi8-IR-fd0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -395,12 +395,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="748-heart.png" width="28" height="25"/>
         <image name="HappyFace" width="250" height="250"/>
+        <image name="HollowHeart" width="28" height="25"/>
         <image name="SadFace" width="36" height="36"/>
-        <image name="SolidHeart.png" width="28" height="25"/>
+        <image name="SolidHeart" width="28" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m57-Im-QlK"/>
+        <segue reference="3mL-1w-zdP"/>
     </inferredMetricsTieBreakers>
 </document>

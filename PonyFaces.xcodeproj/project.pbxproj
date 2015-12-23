@@ -36,9 +36,6 @@
 		B4D7E1021C2884E400ACAC3C /* SearchTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E1011C2884E400ACAC3C /* SearchTagsViewController.m */; };
 		B4D7E1051C28919C00ACAC3C /* PonyFaceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E1041C28919C00ACAC3C /* PonyFaceDetailViewController.m */; };
 		B4D7E1081C28989200ACAC3C /* PonyFacesTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E1071C28989200ACAC3C /* PonyFacesTagsView.m */; };
-		B4D7E10C1C28A10B00ACAC3C /* 748-heart.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D7E1091C28A10B00ACAC3C /* 748-heart.png */; };
-		B4D7E10D1C28A10B00ACAC3C /* 748-heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D7E10A1C28A10B00ACAC3C /* 748-heart@2x.png */; };
-		B4D7E10E1C28A10B00ACAC3C /* 748-heart@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D7E10B1C28A10B00ACAC3C /* 748-heart@3x.png */; };
 		B4D7E1111C28A3CA00ACAC3C /* PonyFacesFavorites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E10F1C28A3CA00ACAC3C /* PonyFacesFavorites.xcdatamodeld */; };
 		B4D7E1241C28A52200ACAC3C /* _FavoritePonyFace.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E1191C28A52200ACAC3C /* _FavoritePonyFace.m */; };
 		B4D7E1251C28A52200ACAC3C /* _FavoritePonyFaceCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E11B1C28A52200ACAC3C /* _FavoritePonyFaceCategory.m */; };
@@ -49,9 +46,6 @@
 		B4D7E12F1C28A63600ACAC3C /* FavoritePonyFacesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D7E12E1C28A63600ACAC3C /* FavoritePonyFacesManager.m */; };
 		B4DC40391C29C7070097925A /* PonyFaceFavoritesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DC40381C29C7070097925A /* PonyFaceFavoritesDataSource.m */; };
 		B4DC403D1C29DBC70097925A /* PonyFaceFavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DC403C1C29DBC70097925A /* PonyFaceFavoritesViewController.m */; };
-		B4DC40411C29F1E50097925A /* SolidHeart.png in Resources */ = {isa = PBXBuildFile; fileRef = B4DC403E1C29F1E50097925A /* SolidHeart.png */; };
-		B4DC40421C29F1E50097925A /* SolidHeart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4DC403F1C29F1E50097925A /* SolidHeart@2x.png */; };
-		B4DC40431C29F1E50097925A /* SolidHeart@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4DC40401C29F1E50097925A /* SolidHeart@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,9 +78,6 @@
 		B4D7E1041C28919C00ACAC3C /* PonyFaceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PonyFaceDetailViewController.m; sourceTree = "<group>"; };
 		B4D7E1061C28989200ACAC3C /* PonyFacesTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PonyFacesTagsView.h; sourceTree = "<group>"; };
 		B4D7E1071C28989200ACAC3C /* PonyFacesTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PonyFacesTagsView.m; sourceTree = "<group>"; };
-		B4D7E1091C28A10B00ACAC3C /* 748-heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "748-heart.png"; sourceTree = "<group>"; };
-		B4D7E10A1C28A10B00ACAC3C /* 748-heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "748-heart@2x.png"; sourceTree = "<group>"; };
-		B4D7E10B1C28A10B00ACAC3C /* 748-heart@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "748-heart@3x.png"; sourceTree = "<group>"; };
 		B4D7E1101C28A3CA00ACAC3C /* PonyFacesFavorites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PonyFacesFavorites.xcdatamodel; sourceTree = "<group>"; };
 		B4D7E1181C28A52200ACAC3C /* _FavoritePonyFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FavoritePonyFace.h; sourceTree = "<group>"; };
 		B4D7E1191C28A52200ACAC3C /* _FavoritePonyFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FavoritePonyFace.m; sourceTree = "<group>"; };
@@ -107,9 +98,6 @@
 		B4DC403A1C29D03A0097925A /* PonyFaceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PonyFaceModel.h; sourceTree = "<group>"; };
 		B4DC403B1C29DBC70097925A /* PonyFaceFavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PonyFaceFavoritesViewController.h; sourceTree = "<group>"; };
 		B4DC403C1C29DBC70097925A /* PonyFaceFavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PonyFaceFavoritesViewController.m; sourceTree = "<group>"; };
-		B4DC403E1C29F1E50097925A /* SolidHeart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SolidHeart.png; sourceTree = "<group>"; };
-		B4DC403F1C29F1E50097925A /* SolidHeart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SolidHeart@2x.png"; sourceTree = "<group>"; };
-		B4DC40401C29F1E50097925A /* SolidHeart@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SolidHeart@3x.png"; sourceTree = "<group>"; };
 		B91F9791F3CCE4097F3767CA /* Pods_PonyFaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PonyFaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -203,12 +191,6 @@
 		B424ACB71C28769A001C05A1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B4DC403E1C29F1E50097925A /* SolidHeart.png */,
-				B4DC403F1C29F1E50097925A /* SolidHeart@2x.png */,
-				B4DC40401C29F1E50097925A /* SolidHeart@3x.png */,
-				B4D7E1091C28A10B00ACAC3C /* 748-heart.png */,
-				B4D7E10A1C28A10B00ACAC3C /* 748-heart@2x.png */,
-				B4D7E10B1C28A10B00ACAC3C /* 748-heart@3x.png */,
 				B424ACD11C2876E1001C05A1 /* Warnings.xcconfig */,
 				B424ACB81C28769A001C05A1 /* main.m */,
 				B4D7E10F1C28A3CA00ACAC3C /* PonyFacesFavorites.xcdatamodeld */,
@@ -299,15 +281,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4D7E10D1C28A10B00ACAC3C /* 748-heart@2x.png in Resources */,
-				B4D7E10C1C28A10B00ACAC3C /* 748-heart.png in Resources */,
-				B4D7E10E1C28A10B00ACAC3C /* 748-heart@3x.png in Resources */,
 				B424ACCA1C28769A001C05A1 /* LaunchScreen.storyboard in Resources */,
 				B424ACC71C28769A001C05A1 /* Assets.xcassets in Resources */,
-				B4DC40421C29F1E50097925A /* SolidHeart@2x.png in Resources */,
-				B4DC40431C29F1E50097925A /* SolidHeart@3x.png in Resources */,
 				B424ACC51C28769A001C05A1 /* Main.storyboard in Resources */,
-				B4DC40411C29F1E50097925A /* SolidHeart.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
