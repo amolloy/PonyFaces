@@ -10,11 +10,12 @@
 #import "PonyFaceTableViewCell.h"
 #import "PonyFace.h"
 #import "PonyFaceModel.h"
+#import "PonyFaceDetailViewController.h"
 #import <FXReachability/FXReachability.h>
 #import <PINRemoteImage/PINRemoteImageManager.h>
 #import "AppDelegate.h"
 
-@interface PonyFacesTableViewController ()
+@interface PonyFacesTableViewController () <PonyFaceDetailViewControllerDelegate>
 @property (nonatomic, copy) NSArray* thumbnailPrecacheTaskIDs;
 @end
 
@@ -116,6 +117,10 @@
 		PonyFaceTableViewCell* cell = sender;
 		[segue.destinationViewController setPonyFace:cell.ponyFace];
 	}
+	if ([segue.destinationViewController respondsToSelector:@selector(setDelegate:)])
+	{
+		[segue.destinationViewController setDelegate:self];
+	}
 }
 
 #pragma mark - PonyFaceFavoritesDataSourceDelegate
@@ -124,6 +129,13 @@
 {
 	PonyFaceTableViewCell* cell = [self.tableView cellForRowAtIndexPath:indexPath];
 	cell.ponyFace = ponyFace;
+}
+
+#pragma mark - PonyFaceDetailViewControllerDelegate
+
+- (UIViewController*)activityPresentingViewControllerForPonyFaceDetailViewController:(PonyFaceDetailViewController*)controller
+{
+	return self;
 }
 
 @end

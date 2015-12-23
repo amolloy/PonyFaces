@@ -9,6 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "PonyFaceModel.h"
 
+@protocol PonyFaceDetailViewControllerDelegate;
+
 @interface PonyFaceDetailViewController : UIViewController
 @property (nonatomic, strong) id<PonyFaceModel> ponyFace;
+@property (nonatomic, weak) id<PonyFaceDetailViewControllerDelegate> delegate;
+@end
+
+@protocol PonyFaceDetailViewControllerDelegate <NSObject>
+- (UIViewController*)activityPresentingViewControllerForPonyFaceDetailViewController:(PonyFaceDetailViewController*)controller;
 @end
