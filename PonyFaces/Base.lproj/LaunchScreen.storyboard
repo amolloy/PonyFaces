@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +18,43 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3G-1C-eSK">
+                                <rect key="frame" x="75" y="35.5" width="450" height="528"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PonyFace.png" translatesAutoresizingMaskIntoConstraints="NO" id="ehP-qY-LK0">
+                                        <rect key="frame" x="0.0" y="78" width="450" height="450"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ehP-qY-LK0" secondAttribute="height" multiplier="1:1" id="sDj-1H-mZA"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pony Faces" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ne9-9g-ZkI">
+                                        <rect key="frame" x="136.5" y="0.0" width="177" height="58"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="36"/>
+                                        <color key="textColor" red="0.9882352941176471" green="0.42352941176470588" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ehP-qY-LK0" firstAttribute="top" secondItem="ne9-9g-ZkI" secondAttribute="bottom" constant="20" id="40A-c3-TIQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="ehP-qY-LK0" secondAttribute="trailing" id="5GE-Vw-PKA"/>
+                                    <constraint firstAttribute="bottom" secondItem="ehP-qY-LK0" secondAttribute="bottom" id="BPA-H1-ffL"/>
+                                    <constraint firstItem="ne9-9g-ZkI" firstAttribute="top" secondItem="X3G-1C-eSK" secondAttribute="top" id="E76-Om-WPb"/>
+                                    <constraint firstItem="ehP-qY-LK0" firstAttribute="leading" secondItem="X3G-1C-eSK" secondAttribute="leading" id="dhC-vB-NBI"/>
+                                    <constraint firstItem="ne9-9g-ZkI" firstAttribute="centerX" secondItem="X3G-1C-eSK" secondAttribute="centerX" id="rr1-kM-OFP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X3G-1C-eSK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6rR-dp-g4n"/>
+                            <constraint firstItem="X3G-1C-eSK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="BSs-HD-b9G"/>
+                            <constraint firstItem="X3G-1C-eSK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Ivx-WM-eoA"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" relation="greaterThanOrEqual" secondItem="X3G-1C-eSK" secondAttribute="bottom" id="O06-vp-bXD"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="X3G-1C-eSK" secondAttribute="trailing" id="fFW-Bi-4a5"/>
+                            <constraint firstItem="X3G-1C-eSK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="psv-o3-dZh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +62,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PonyFace.png" width="450" height="450"/>
+    </resources>
 </document>
