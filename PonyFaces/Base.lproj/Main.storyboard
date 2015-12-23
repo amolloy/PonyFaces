@@ -167,11 +167,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PonyFaceTableViewCell" id="hbI-KK-4BT" customClass="PonyFaceTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PonyFaceTableViewCell" id="hbI-KK-4BT" customClass="PonyFaceTableViewCell">
                                 <rect key="frame" x="0.0" y="92" width="600" height="155"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hbI-KK-4BT" id="dor-ct-aEp">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="154.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="154.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="g3e-5L-dDo">
@@ -191,7 +191,7 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="0.0" placeholderIntrinsicHeight="98" translatesAutoresizingMaskIntoConstraints="NO" id="fHK-zu-hFZ" customClass="PonyFacesTagsView">
+                                        <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="0.0" placeholderIntrinsicHeight="98" translatesAutoresizingMaskIntoConstraints="NO" id="fHK-zu-hFZ" customClass="PonyFacesTagsView">
                                             <rect key="frame" x="136" y="48.5" width="456" height="98"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -345,6 +345,13 @@
                             <constraint firstItem="ALu-aK-gcc" firstAttribute="centerX" secondItem="KB1-6Q-uuX" secondAttribute="centerX" id="tX3-4u-QaV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="nFK-9x-Rv8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="ORB-gk-Yov">
+                            <connections>
+                                <action selector="share:" destination="HT0-7o-0PG" id="OXq-ef-P0L"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="activityIndicatorView" destination="qtd-am-p7M" id="1wV-Y6-ceh"/>
                         <outlet property="categoryLabel" destination="uVx-dN-MoZ" id="OLS-92-v1K"/>

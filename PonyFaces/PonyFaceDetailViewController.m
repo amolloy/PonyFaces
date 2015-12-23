@@ -74,10 +74,21 @@ static void* const sPonyFaceObvserverContext = (void*)&sPonyFaceObvserverContext
 	[self.favoriteButton setSelected:!isFavorite];
 }
 
+- (IBAction)share:(id)sender
+{
+	UIActivityViewController* avc = [[UIActivityViewController alloc] initWithActivityItems:@[self.imageView.image]
+																	  applicationActivities:nil];
+	[self presentViewController:avc
+					   animated:YES
+					 completion:nil];
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
 {
 	if (sPonyFaceObvserverContext == context)
 	{
+		self.navigationItem.rightBarButtonItem.enabled = NO;
+
 		if (self.ponyFace)
 		{
 			self.categoryLabel.text = self.ponyFace.categoryName;
@@ -86,6 +97,7 @@ static void* const sPonyFaceObvserverContext = (void*)&sPonyFaceObvserverContext
 			[self.imageView pin_setImageFromURL:self.ponyFace.imageURL completion:^(PINRemoteImageManagerResult *result) {
 				[(AppDelegate*)[UIApplication sharedApplication].delegate setNetworkActivityIndicatorVisible:NO];
 				[self.activityIndicatorView stopAnimating];
+				self.navigationItem.rightBarButtonItem.enabled = YES;
 			}];
 			[self.tagsView setTagStrings:self.ponyFace.tags];
 
