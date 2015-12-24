@@ -12,12 +12,16 @@
 #import "PonyFaceSearchResultsDataSource.h"
 
 static NSString* const ShowSearchResultsSegue = @"ShowSearchResults";
+static NSString* const HappyPonyFaceImageName = @"HappyFace";
+static NSString* const SadPonyFaceImageName = @"SadFace";
+static const NSTimeInterval NoResultsAnimationDuration = 0.5;
 
 @interface SearchTagsViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField* searchTextField;
 @property (weak, nonatomic) IBOutlet UIButton* searchButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView* activityIndicator;
 @property (weak, nonatomic) IBOutlet UIView* noResultsView;
+@property (weak, nonatomic) IBOutlet UIImageView* ponyFaceImageView;
 @property (strong, nonatomic) PonyFaceSearchResultsDataSource* searchResults;
 @property (assign, nonatomic) BOOL noResultsViewIsVisible;
 @end
@@ -83,12 +87,14 @@ static NSString* const ShowSearchResultsSegue = @"ShowSearchResults";
 		{
 			self.searchTextField.enabled = YES;
 			self.noResultsViewIsVisible = YES;
-			self.noResultsView.alpha = 0;
-			self.noResultsView.hidden = NO;
-			[UIView animateWithDuration:0.5
-							 animations:^{
-								 self.noResultsView.alpha = 1;
-							 }];
+			[UIView transitionWithView:self.ponyFaceImageView
+							  duration:NoResultsAnimationDuration
+							   options:UIViewAnimationOptionTransitionCrossDissolve
+							animations:^{
+								self.noResultsView.hidden = NO;
+								self.ponyFaceImageView.image = [UIImage imageNamed:SadPonyFaceImageName];
+							}
+							completion:nil];
 		}
 	}
 }
@@ -101,22 +107,37 @@ static NSString* const ShowSearchResultsSegue = @"ShowSearchResults";
 	}
 }
 
+- (void)hideNoResultsViewIfNeeded
+{
+	if (self.noResultsViewIsVisible)
+	{
+		self.noResultsViewIsVisible = NO;
+		[UIView transitionWithView:self.ponyFaceImageView
+						  duration:NoResultsAnimationDuration
+						   options:UIViewAnimationOptionTransitionCrossDissolve
+						animations:^{
+							self.noResultsView.hidden = YES;
+							self.ponyFaceImageView.image = [UIImage imageNamed:HappyPonyFaceImageName];
+						}
+						completion:nil];
+	}
+}
+
 #pragma mark Text field delegate
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
 	NSString* newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
 	self.searchButton.enabled = newString.length != 0;
-	if (self.noResultsViewIsVisible)
-	{
-		self.noResultsViewIsVisible = NO;
-		[UIView animateWithDuration:0.5
-						 animations:^{
-							 self.noResultsView.alpha = 0;
-						 } completion:^(BOOL finished) {
-							 self.noResultsView.hidden = YES;
-						 }];
-	}
+	[self hideNoResultsViewIfNeeded];
+
+	return YES;
+}
+
+- (BOOL)textFieldShouldClear:(UITextField *)textField
+{
+	[self hideNoResultsViewIfNeeded];
+
 	return YES;
 }
 
