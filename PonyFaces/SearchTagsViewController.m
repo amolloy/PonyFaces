@@ -38,6 +38,12 @@ static const NSTimeInterval NoResultsAnimationDuration = 0.5;
 	self.searchButton.enabled = (self.searchTextField.text.length != 0);
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+	[super viewDidAppear:animated];
+	[self.searchTextField becomeFirstResponder];
+}
+
 - (IBAction)search:(id)sender
 {
 	self.searchTextField.enabled = NO;
@@ -109,6 +115,7 @@ static const NSTimeInterval NoResultsAnimationDuration = 0.5;
 	if (segue.destinationViewController.popoverPresentationController != nil)
 	{
 		segue.destinationViewController.popoverPresentationController.delegate = self;
+		[self.searchTextField resignFirstResponder];
 	}
 }
 
@@ -133,6 +140,11 @@ static const NSTimeInterval NoResultsAnimationDuration = 0.5;
 - (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller
 {
 	return UIModalPresentationNone;
+}
+
+- (void)popoverPresentationControllerDidDismissPopover:(UIPopoverPresentationController *)popoverPresentationController
+{
+	[self.searchTextField becomeFirstResponder];
 }
 
 #pragma mark Text field delegate
