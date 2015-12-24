@@ -23,6 +23,7 @@ static const NSTimeInterval NoResultsAnimationDuration = 0.5;
 @property (weak, nonatomic) IBOutlet UIView* noResultsView;
 @property (weak, nonatomic) IBOutlet UIImageView* ponyFaceImageView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint* bottomConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint* landscapeBottomConstraint;
 @property (strong, nonatomic) PonyFaceSearchResultsDataSource* searchResults;
 @property (assign, nonatomic) BOOL noResultsViewIsVisible;
 @end
@@ -176,6 +177,7 @@ static const NSTimeInterval NoResultsAnimationDuration = 0.5;
 - (void)setBottomConstraintConstant:(CGFloat)constant withNotification:(NSNotification*)note
 {
 	self.bottomConstraint.constant = constant;
+	self.landscapeBottomConstraint.constant = constant + 8;
 
 	[UIView beginAnimations:nil context:NULL];
 	{
