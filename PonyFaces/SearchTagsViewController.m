@@ -22,6 +22,7 @@ static const NSTimeInterval NoResultsAnimationDuration = 0.5;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView* activityIndicator;
 @property (weak, nonatomic) IBOutlet UIView* noResultsView;
 @property (weak, nonatomic) IBOutlet UIImageView* ponyFaceImageView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint* bottomConstraint;
 @property (strong, nonatomic) PonyFaceSearchResultsDataSource* searchResults;
 @property (assign, nonatomic) BOOL noResultsViewIsVisible;
 @end
@@ -36,6 +37,22 @@ static const NSTimeInterval NoResultsAnimationDuration = 0.5;
 	self.searchResults = nil;
 	[self.activityIndicator stopAnimating];
 	self.searchButton.enabled = (self.searchTextField.text.length != 0);
+
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(keyboardWillShow:)
+												 name:UIKeyboardWillShowNotification
+											   object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(keyboardWillHide:)
+												 name:UIKeyboardWillHideNotification
+											   object:nil];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+	[super viewDidDisappear:animated];
+
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -139,6 +156,39 @@ static const NSTimeInterval NoResultsAnimationDuration = 0.5;
 {
 	[self dismissViewControllerAnimated:YES
 							 completion:^{}];
+}
+
+- (void)keyboardWillShow:(NSNotification*)note
+{
+	NSValue* keyboardFinalFrameValue = note.userInfo[UIKeyboardFrameEndUserInfoKey];
+	CGRect keyboardFinalFrame = keyboardFinalFrameValue.CGRectValue;
+
+	[self setBottomConstraintConstant:keyboardFinalFrame.size.height
+					 withNotification:note];
+}
+
+- (void)keyboardWillHide:(NSNotification*)note
+{
+	[self setBottomConstraintConstant:0
+					 withNotification:note];
+}
+
+- (void)setBottomConstraintConstant:(CGFloat)constant withNotification:(NSNotification*)note
+{
+	self.bottomConstraint.constant = constant;
+
+	[UIView beginAnimations:nil context:NULL];
+	{
+		NSTimeInterval duration = [note.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+		[UIView setAnimationDuration:duration];
+
+		UIViewAnimationCurve curve = [note.userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
+		[UIView setAnimationCurve:curve];
+		[UIView setAnimationBeginsFromCurrentState:YES];
+
+		[self.view layoutIfNeeded];
+	}
+	[UIView commitAnimations];
 }
 
 #pragma mark Popover Presentation Controller Delegate
