@@ -16,7 +16,7 @@ static NSString* const HappyPonyFaceImageName = @"HappyFace";
 static NSString* const SadPonyFaceImageName = @"SadFace";
 static const NSTimeInterval NoResultsAnimationDuration = 0.5;
 
-@interface SearchTagsViewController () <UITextFieldDelegate>
+@interface SearchTagsViewController () <UITextFieldDelegate, UIPopoverPresentationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField* searchTextField;
 @property (weak, nonatomic) IBOutlet UIButton* searchButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView* activityIndicator;
@@ -105,6 +105,11 @@ static const NSTimeInterval NoResultsAnimationDuration = 0.5;
 	{
 		[segue.destinationViewController setPonyFacesDataSource:self.searchResults];
 	}
+
+	if (segue.destinationViewController.popoverPresentationController != nil)
+	{
+		segue.destinationViewController.popoverPresentationController.delegate = self;
+	}
 }
 
 - (void)hideNoResultsViewIfNeeded
@@ -121,6 +126,13 @@ static const NSTimeInterval NoResultsAnimationDuration = 0.5;
 						}
 						completion:nil];
 	}
+}
+
+#pragma mark Popover Presentation Controller Delegate
+
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller
+{
+	return UIModalPresentationNone;
 }
 
 #pragma mark Text field delegate

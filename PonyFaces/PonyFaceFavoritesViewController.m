@@ -18,14 +18,10 @@
 	tableViewController.ponyFacesDataSource = [[PonyFaceFavoritesDataSource alloc] initWithTableView:tableViewController.tableView];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
+- (IBAction)done:(id)sender
 {
-	[super viewWillDisappear:animated];
-
-	// To avoid a situation where the user is viewing a favorite pony face, then switched to the search tab
-	// and views the same pony face, then toggles the favorite status off, go ahead and back out to the
-	// favorites table view whenever the favorites tab is left.
-	[self popToRootViewControllerAnimated:animated];
+	[self dismissViewControllerAnimated:YES
+							 completion:^{}];
 }
 
 @end

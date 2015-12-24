@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kTJ-w3-yQT">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -129,6 +129,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Pony Faces" id="1OQ-gZ-fu1">
                         <barButtonItem key="backBarButtonItem" title="Search" id="tYt-ol-3yY"/>
+                        <barButtonItem key="leftBarButtonItem" title="Favorites" id="ozz-or-hJ1">
+                            <connections>
+                                <segue destination="awm-5n-D7q" kind="popoverPresentation" popoverAnchorBarButtonItem="ozz-or-hJ1" id="XlC-QG-3tC">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="dT8-Rc-zP6" id="5do-W2-eY2"/>
@@ -146,11 +153,11 @@
         <!--Pony Faces Table View Controller-->
         <scene sceneID="PxZ-3A-3nf">
             <objects>
-                <tableViewController id="Xr7-Ww-dKB" customClass="PonyFacesTableViewController" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="overCurrentContext" id="Xr7-Ww-dKB" customClass="PonyFacesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="155" sectionHeaderHeight="28" sectionFooterHeight="28" id="5Lb-lf-Kbj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PonyFaceTableViewCell" id="hbI-KK-4BT" customClass="PonyFaceTableViewCell">
                                 <rect key="frame" x="0.0" y="92" width="600" height="155"/>
@@ -242,7 +249,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="240" translatesAutoresizingMaskIntoConstraints="NO" id="ALu-aK-gcc">
                                 <rect key="frame" x="180" y="121" width="240" height="240"/>
                             </imageView>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="98" translatesAutoresizingMaskIntoConstraints="NO" id="ZBH-Jl-Zri" customClass="PonyFacesTagsView">
+                            <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="98" translatesAutoresizingMaskIntoConstraints="NO" id="ZBH-Jl-Zri" customClass="PonyFacesTagsView">
                                 <rect key="frame" x="20" y="445" width="560" height="98"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -352,29 +359,10 @@
             </objects>
             <point key="canvasLocation" x="3434" y="0.0"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="yl2-sM-qoP">
-            <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
-                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="kTJ-w3-yQT" kind="relationship" relationship="viewControllers" id="zAB-d0-Sen"/>
-                        <segue destination="awm-5n-D7q" kind="relationship" relationship="viewControllers" id="IyO-oD-fQr"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
-        </scene>
         <!--Favorites-->
         <scene sceneID="ejV-8B-RYy">
             <objects>
-                <navigationController id="awm-5n-D7q" customClass="PonyFaceFavoritesViewController" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="overCurrentContext" id="awm-5n-D7q" customClass="PonyFaceFavoritesViewController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favorites" image="HollowHeart" id="Z2G-sj-y72"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hi8-IR-fd0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -386,7 +374,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KjP-LE-Ebh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="921" y="289"/>
+            <point key="canvasLocation" x="1741" y="0.0"/>
         </scene>
     </scenes>
     <resources>
@@ -395,7 +383,7 @@
         <image name="SolidHeart" width="28" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m57-Im-QlK"/>
+        <segue reference="3mL-1w-zdP"/>
         <segue reference="wKV-Jq-laQ"/>
     </inferredMetricsTieBreakers>
 </document>
