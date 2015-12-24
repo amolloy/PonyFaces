@@ -110,6 +110,7 @@ static const NSTimeInterval NoResultsAnimationDuration = 0.5;
 		else
 		{
 			self.searchTextField.enabled = YES;
+			[self.searchTextField becomeFirstResponder];
 			self.noResultsViewIsVisible = YES;
 			[UIView transitionWithView:self.ponyFaceImageView
 							  duration:NoResultsAnimationDuration
