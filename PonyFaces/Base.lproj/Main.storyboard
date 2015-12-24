@@ -13,7 +13,7 @@
             <objects>
                 <navigationController id="kTJ-w3-yQT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="search" id="v5y-7d-4xm"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="3PG-5Q-PFO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="3PG-5Q-PFO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.99744850397109985" green="0.41150885820388794" blue="0.70374852418899536" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -372,7 +372,7 @@
             <objects>
                 <navigationController modalPresentationStyle="overCurrentContext" id="awm-5n-D7q" customClass="PonyFaceFavoritesViewController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favorites" image="HollowHeart" id="Z2G-sj-y72"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Hi8-IR-fd0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Hi8-IR-fd0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.99744850397109985" green="0.41150885820388794" blue="0.70374852418899536" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -392,7 +392,7 @@
         <image name="SolidHeart" width="28" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m57-Im-QlK"/>
+        <segue reference="3mL-1w-zdP"/>
         <segue reference="wKV-Jq-laQ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
