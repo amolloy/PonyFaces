@@ -135,11 +135,24 @@ static const NSTimeInterval NoResultsAnimationDuration = 0.5;
 	}
 }
 
+- (void)done:(id)sender
+{
+	[self dismissViewControllerAnimated:YES
+							 completion:^{}];
+}
+
 #pragma mark Popover Presentation Controller Delegate
 
-- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller
+-(UIViewController*)presentationController:(UIPresentationController *)controller viewControllerForAdaptivePresentationStyle:(UIModalPresentationStyle)style
 {
-	return UIModalPresentationNone;
+	UINavigationController* navController = (UINavigationController*)controller.presentedViewController;
+	UIViewController* rootViewController = [navController viewControllers].firstObject;
+
+	rootViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+																										target:self
+																										action:@selector(done:)];
+
+	return navController;
 }
 
 - (void)popoverPresentationControllerDidDismissPopover:(UIPopoverPresentationController *)popoverPresentationController
