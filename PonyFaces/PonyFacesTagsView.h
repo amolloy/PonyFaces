@@ -8,7 +8,10 @@
 
 #import <SKTagView/SKTagView.h>
 
+IB_DESIGNABLE
 @interface PonyFacesTagsView : SKTagView
+
+@property (assign, nonatomic) IBInspectable CGFloat fontSize;
 
 - (void)setTagStrings:(NSArray<NSString*>*)tagStrings;
 

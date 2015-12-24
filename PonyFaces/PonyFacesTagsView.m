@@ -17,6 +17,7 @@
 	{
 		self.insets = 8;
 		self.lineSpace = 8;
+		self.fontSize = 16;
 	}
 	return self;
 }
@@ -29,7 +30,7 @@
 		SKTag* tag = [SKTag tagWithText:tagString];
 
 		tag.textColor = [UIColor whiteColor];
-		tag.font = [UIFont systemFontOfSize:16];
+		tag.font = [UIFont systemFontOfSize:self.fontSize];
 		tag.padding = UIEdgeInsetsMake(4, 8, 4, 8);
 		tag.bgColor = [UIColor purpleColor];
 		tag.cornerRadius = 5;
@@ -37,4 +38,5 @@
 		[self addTag:tag];
 	}
 }
+
 @end

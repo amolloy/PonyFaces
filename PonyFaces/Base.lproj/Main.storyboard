@@ -253,11 +253,16 @@
                                 <rect key="frame" x="180" y="57" width="240" height="240"/>
                             </imageView>
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="98" translatesAutoresizingMaskIntoConstraints="NO" id="ZBH-Jl-Zri" customClass="PonyFacesTagsView">
-                                <rect key="frame" x="20" y="430" width="560" height="98"/>
+                                <rect key="frame" x="20" y="305" width="560" height="98"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jcj-Oa-RQA"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="jcj-Oa-RQA"/>
@@ -330,9 +335,9 @@
                             <constraint firstItem="18L-WB-wsl" firstAttribute="centerX" secondItem="KB1-6Q-uuX" secondAttribute="centerX" id="HBf-yr-3VO"/>
                             <constraint firstItem="ZBH-Jl-Zri" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qtd-am-p7M" secondAttribute="bottom" constant="8" symbolic="YES" id="Ibq-Dq-U7E"/>
                             <constraint firstItem="qtd-am-p7M" firstAttribute="centerX" secondItem="ALu-aK-gcc" secondAttribute="centerX" priority="750" id="PLC-VR-eqQ"/>
-                            <constraint firstItem="ZBH-Jl-Zri" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ALu-aK-gcc" secondAttribute="bottom" constant="8" symbolic="YES" id="RUf-M6-rLh"/>
+                            <constraint firstItem="ZBH-Jl-Zri" firstAttribute="top" secondItem="ALu-aK-gcc" secondAttribute="bottom" constant="8" symbolic="YES" id="RUf-M6-rLh"/>
                             <constraint firstItem="18L-WB-wsl" firstAttribute="top" secondItem="A3n-Ev-zsI" secondAttribute="bottom" constant="8" symbolic="YES" id="SsO-pC-b0M"/>
-                            <constraint firstItem="f3T-BH-aAl" firstAttribute="top" secondItem="ZBH-Jl-Zri" secondAttribute="bottom" constant="8" symbolic="YES" id="Tlv-VV-xGO"/>
+                            <constraint firstItem="f3T-BH-aAl" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ZBH-Jl-Zri" secondAttribute="bottom" constant="8" symbolic="YES" id="Tlv-VV-xGO"/>
                             <constraint firstItem="qtd-am-p7M" firstAttribute="top" relation="greaterThanOrEqual" secondItem="18L-WB-wsl" secondAttribute="bottom" constant="8" symbolic="YES" id="VoS-eq-thA"/>
                             <constraint firstItem="ZBH-Jl-Zri" firstAttribute="leading" secondItem="KB1-6Q-uuX" secondAttribute="leadingMargin" id="g7z-Kj-uXW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZBH-Jl-Zri" secondAttribute="trailing" id="i9F-b5-EDK"/>
