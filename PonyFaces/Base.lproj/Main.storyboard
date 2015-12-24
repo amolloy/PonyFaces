@@ -78,8 +78,8 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="dT8-Rc-zP6">
                                 <rect key="frame" x="496" y="258" width="20" height="20"/>
                             </activityIndicatorView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sorry, no matches." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9v-HJ-CIr">
-                                <rect key="frame" x="240.5" y="291" width="121" height="17"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, no matches." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9v-HJ-CIr">
+                                <rect key="frame" x="239.5" y="291" width="121" height="17"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <color key="textColor" red="0.59607843137254901" green="0.43529411764705883" blue="0.64313725490196083" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -180,13 +180,13 @@
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="118" id="xyb-tw-xIb"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pr3-2x-6Lw">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pr3-2x-6Lw">
                                             <rect key="frame" x="136" y="8" width="93" height="32.5"/>
                                             <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="27"/>
                                             <color key="textColor" red="0.9882352941176471" green="0.42352941176470588" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="0.0" placeholderIntrinsicHeight="98" translatesAutoresizingMaskIntoConstraints="NO" id="fHK-zu-hFZ" customClass="PonyFacesTagsView">
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="0.0" placeholderIntrinsicHeight="98" translatesAutoresizingMaskIntoConstraints="NO" id="fHK-zu-hFZ" customClass="PonyFacesTagsView">
                                             <rect key="frame" x="136" y="48.5" width="423" height="98"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -392,7 +392,7 @@
         <image name="SolidHeart" width="28" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3mL-1w-zdP"/>
+        <segue reference="m57-Im-QlK"/>
         <segue reference="wKV-Jq-laQ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
