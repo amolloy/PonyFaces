@@ -38,8 +38,8 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" misplaced="YES" image="HappyFace" translatesAutoresizingMaskIntoConstraints="NO" id="rAR-5J-Lzq">
-                                <rect key="frame" x="198" y="72" width="205" height="205"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="HappyFace" translatesAutoresizingMaskIntoConstraints="NO" id="rAR-5J-Lzq">
+                                <rect key="frame" x="182" y="8" width="237" height="237"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rAR-5J-Lzq" secondAttribute="height" multiplier="1:1" id="mrq-Ti-UVk"/>
                                 </constraints>
@@ -51,8 +51,8 @@
                                     <constraint firstAttribute="width" constant="10" id="djn-HU-7xj"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UYq-E0-P4S" userLabel="Top Spacer View">
-                                <rect key="frame" x="295" y="72" width="10" height="0.0"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYq-E0-P4S" userLabel="Top Spacer View">
+                                <rect key="frame" x="295" y="8" width="10" height="0.0"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="10" id="RFd-cL-5qX"/>
@@ -184,8 +184,8 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="0.0" placeholderIntrinsicHeight="98" translatesAutoresizingMaskIntoConstraints="NO" id="fHK-zu-hFZ" customClass="PonyFacesTagsView">
-                                            <rect key="frame" x="136" y="48.5" width="456" height="98"/>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="0.0" placeholderIntrinsicHeight="98" translatesAutoresizingMaskIntoConstraints="NO" id="fHK-zu-hFZ" customClass="PonyFacesTagsView">
+                                            <rect key="frame" x="136" y="48.5" width="423" height="98"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="Bzi-WV-5ds"/>
@@ -247,11 +247,11 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" misplaced="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="240" translatesAutoresizingMaskIntoConstraints="NO" id="ALu-aK-gcc">
-                                <rect key="frame" x="180" y="121" width="240" height="240"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="240" translatesAutoresizingMaskIntoConstraints="NO" id="ALu-aK-gcc">
+                                <rect key="frame" x="180" y="57" width="240" height="240"/>
                             </imageView>
-                            <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="98" translatesAutoresizingMaskIntoConstraints="NO" id="ZBH-Jl-Zri" customClass="PonyFacesTagsView">
-                                <rect key="frame" x="20" y="445" width="560" height="98"/>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="98" translatesAutoresizingMaskIntoConstraints="NO" id="ZBH-Jl-Zri" customClass="PonyFacesTagsView">
+                                <rect key="frame" x="20" y="430" width="560" height="98"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jcj-Oa-RQA"/>
@@ -262,12 +262,12 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="qtd-am-p7M">
-                                <rect key="frame" x="282" y="222" width="37" height="37"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="qtd-am-p7M">
+                                <rect key="frame" x="282" y="158" width="37" height="37"/>
                                 <color key="color" red="0.99228733777999878" green="0.0" blue="0.89954441785812378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18L-WB-wsl">
-                                <rect key="frame" x="243" y="72" width="113" height="41"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="18L-WB-wsl">
+                                <rect key="frame" x="243" y="8" width="113" height="41"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPL-6G-ou5" customClass="SYFavoriteButton">
                                         <rect key="frame" x="72" y="0.0" width="41" height="41"/>
@@ -385,7 +385,7 @@
         <image name="SolidHeart" width="28" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3mL-1w-zdP"/>
+        <segue reference="m57-Im-QlK"/>
         <segue reference="wKV-Jq-laQ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
