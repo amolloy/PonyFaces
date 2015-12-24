@@ -34,7 +34,7 @@
 	UIFont* titleFont = [UIFont fontWithDescriptor:[self ponyFacesFontDescriptor]
 											  size:24];
 	[[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: titleFont,
-														   NSForegroundColorAttributeName: [self ponyFacesMainColor]}];
+														   NSForegroundColorAttributeName: [UIColor whiteColor]}];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
