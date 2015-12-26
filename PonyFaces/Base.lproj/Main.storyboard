@@ -105,8 +105,8 @@
                                 <exclude reference="7og-vy-Tjw"/>
                                 <exclude reference="WLh-ZG-tLE"/>
                                 <exclude reference="kA5-eo-Ws2"/>
-                                <exclude reference="TjB-AZ-USS"/>
                                 <exclude reference="Epy-4V-1db"/>
+                                <exclude reference="TjB-AZ-USS"/>
                                 <exclude reference="evS-nd-JbN"/>
                             </mask>
                         </variation>
@@ -119,11 +119,11 @@
                                 <include reference="kA5-eo-Ws2"/>
                                 <exclude reference="oFl-aQ-SP7"/>
                                 <exclude reference="pLo-ib-wVQ"/>
-                                <exclude reference="2x5-j5-dSd"/>
-                                <include reference="TjB-AZ-USS"/>
                                 <exclude reference="BWY-vV-ROf"/>
                                 <include reference="Epy-4V-1db"/>
                                 <exclude reference="VQ5-Cl-o4T"/>
+                                <exclude reference="2x5-j5-dSd"/>
+                                <include reference="TjB-AZ-USS"/>
                                 <exclude reference="8tr-hj-87L"/>
                                 <include reference="evS-nd-JbN"/>
                             </mask>
