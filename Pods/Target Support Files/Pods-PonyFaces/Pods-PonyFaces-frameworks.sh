@@ -84,6 +84,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-PonyFaces/DZNEmptyDataSet.framework"
   install_framework "Pods-PonyFaces/FLAnimatedImage.framework"
   install_framework "Pods-PonyFaces/FXReachability.framework"
   install_framework "Pods-PonyFaces/MagicalRecord.framework"
@@ -94,6 +95,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-PonyFaces/SYFavoriteButton.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-PonyFaces/DZNEmptyDataSet.framework"
   install_framework "Pods-PonyFaces/FLAnimatedImage.framework"
   install_framework "Pods-PonyFaces/FXReachability.framework"
   install_framework "Pods-PonyFaces/MagicalRecord.framework"

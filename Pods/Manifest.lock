@@ -1,4 +1,5 @@
 PODS:
+  - DZNEmptyDataSet (1.7.3)
   - FLAnimatedImage (1.0.10)
   - FXReachability (1.3.1)
   - MagicalRecord (2.3.0)
@@ -16,6 +17,7 @@ PODS:
   - SYFavoriteButton (1.0)
 
 DEPENDENCIES:
+  - DZNEmptyDataSet
   - FXReachability
   - MagicalRecord
   - PINRemoteImage
@@ -23,6 +25,7 @@ DEPENDENCIES:
   - SYFavoriteButton
 
 SPEC CHECKSUMS:
+  DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
   FLAnimatedImage: e16a1e1cef08e4c509b47e4acbe3923f65c16135
   FXReachability: 1d9a83617474f2a4e1b53c11a13ec4337428c126
   MagicalRecord: 89eb7d7ead39fb37f01c3d010665ee94d17f8dba

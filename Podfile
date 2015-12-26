@@ -10,4 +10,5 @@ target :PonyFaces do
 	pod 'MagicalRecord'
 	pod 'SYFavoriteButton'
 	pod 'FXReachability'
+	pod 'DZNEmptyDataSet'
 end
