@@ -42,7 +42,7 @@
 
 - (UIImage*)imageForEmptyDataSet:(UIScrollView *)scrollView
 {
-	return [UIImage imageNamed:@"HappyFace"];
+	return [UIImage imageNamed:@"SillyFace"];
 }
 
 - (NSAttributedString*)titleForEmptyDataSet:(UIScrollView *)scrollView
