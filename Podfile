@@ -12,3 +12,8 @@ target :PonyFaces do
 	pod 'FXReachability'
 	pod 'DZNEmptyDataSet'
 end
+
+post_install do | installer |
+	require 'fileutils'
+	FileUtils.copy('Pods/Target Support Files/Pods-PonyFaces/Pods-PonyFaces-acknowledgements.plist', 'PonyFaces/Settings.bundle/Acknowledgements.plist')
+end
