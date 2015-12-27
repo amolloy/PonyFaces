@@ -377,7 +377,7 @@
         <scene sceneID="ejV-8B-RYy">
             <objects>
                 <navigationController modalPresentationStyle="overCurrentContext" id="awm-5n-D7q" customClass="PonyFaceFavoritesViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" image="HollowHeart" id="Z2G-sj-y72"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" id="Z2G-sj-y72"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Hi8-IR-fd0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -394,11 +394,10 @@
     </scenes>
     <resources>
         <image name="HappyFace" width="250" height="250"/>
-        <image name="HollowHeart" width="28" height="25"/>
         <image name="SolidHeart" width="28" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m57-Im-QlK"/>
+        <segue reference="3mL-1w-zdP"/>
         <segue reference="wKV-Jq-laQ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
