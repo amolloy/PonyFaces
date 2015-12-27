@@ -17,7 +17,6 @@
 
 @interface PonyFacesTableViewController () <PonyFaceDetailViewControllerDelegate>
 @property (nonatomic, copy) NSArray* thumbnailPrecacheTaskIDs;
-@property (nonatomic, assign) UITableViewCellSeparatorStyle defaultSeparatorStyle;
 @end
 
 @implementation PonyFacesTableViewController
@@ -25,7 +24,6 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	self.defaultSeparatorStyle = self.tableView.separatorStyle;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -73,15 +71,6 @@
 	}
 
 	self.navigationItem.title = [self.ponyFacesDataSource navigationItemTitle];
-
-	if ([self.ponyFacesDataSource numberOfCategories] == 0)
-	{
-		self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-	}
-	else
-	{
-		self.tableView.separatorStyle = self.defaultSeparatorStyle;
-	}
 }
 
 - (void)viewWillDisappear:(BOOL)animated
