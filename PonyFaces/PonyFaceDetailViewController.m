@@ -76,14 +76,26 @@ static void* const sPonyFaceObvserverContext = (void*)&sPonyFaceObvserverContext
 
 - (IBAction)share:(id)sender
 {
-	[self shareFromViewController:self];
+	[self shareFromViewController:self
+						   source:sender];
 }
 
 - (void)shareFromViewController:(UIViewController*)controller
+						 source:(id)source
 {
 	UIActivityViewController* avc = [[UIActivityViewController alloc] initWithActivityItems:@[self.imageView.image]
 																	  applicationActivities:nil];
-
+	if (controller == self)
+	{
+		if ([source isKindOfClass:[UIBarButtonItem class]])
+		{
+			avc.popoverPresentationController.barButtonItem = source;
+		}
+		else if ([source isKindOfClass:[UIView class]])
+		{
+			avc.popoverPresentationController.sourceView = source;
+		}
+	}
 	[controller presentViewController:avc
 							 animated:YES
 						   completion:nil];
@@ -130,7 +142,8 @@ static void* const sPonyFaceObvserverContext = (void*)&sPonyFaceObvserverContext
 																	  UIViewController* previewViewController)
 									{
 										PonyFaceDetailViewController* vc = (PonyFaceDetailViewController*)previewViewController;
-										[vc shareFromViewController:[vc.delegate activityPresentingViewControllerForPonyFaceDetailViewController:vc]];
+										[vc shareFromViewController:[vc.delegate activityPresentingViewControllerForPonyFaceDetailViewController:vc]
+															 source:nil];
 									}];
 
 	NSString* favString = nil;
