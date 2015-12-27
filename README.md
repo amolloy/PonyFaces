@@ -8,4 +8,4 @@ Third party dependencies are managed using CocoaPods. All CocoaPod sources have 
 
 # Building
 
-Open PonyFaces.xcworkspace in Xcode 7.2 and build the PonyFaces scheme, which should be selected by default. The deployment target is iOS 9.2. 
+Open PonyFaces.xcworkspace in Xcode 7.2 and build the PonyFaces scheme, which should be selected by default. The deployment target is iOS 9.2, and the app supports both iPhone and iPad, but is optimized for iPhones.
